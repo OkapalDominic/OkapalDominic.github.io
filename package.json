@@ -1,7 +1,7 @@
 {
   "name": "dominic_okapal_portfolio",
   "version": "1.0.0",
-  "homepage": "https://OkapalDominic.github.io/portfolio",
+  "homepage": "https://okapaldominic.github.io",
   "description": "A portfolio site for Dominic Okapal",
   "main": "index.js",
   "dependencies": {
@@ -18,14 +18,14 @@
     "parcel-bundler": "^1.12.3"
   },
   "scripts": {
-    "build": "parcel build ./index.html --public-url /portfolio",
-    "start": "parcel ./index.html -p 1337 --public-url /portfolio",
-    "predeploy": "npm run build --public-url /portfolio",
+    "build": "parcel build ./index.html",
+    "start": "parcel ./index.html -p 1337",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OkapalDominic/portfolio.git"
+    "url": "git+https://github.com/OkapalDominic/okapaldominic.github.io"
   },
   "keywords": [
     "portfolio",
@@ -35,6 +35,6 @@
   "author": "Dominic Okapal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OkapalDominic/portfolio/issues"
+    "url": "https://github.com/OkapalDominic/okapaldominic.github.io/issues"
   }
 }

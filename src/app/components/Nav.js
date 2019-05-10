@@ -104,19 +104,19 @@ export default class Nav extends React.Component {
 
                     <NavList>
                         <NavItem>
-                            <a href="/portfolio/">Home</a>
+                            <a href="/">Home</a>
                         </NavItem>
 
                         <NavItem>
-                            <a href="/portfolio/about">About</a>
+                            <a href="/about">About</a>
                         </NavItem>
 
                         <NavItem>
-                            <a href="/portfolio/portfolio">Portfolio</a>
+                            <a href="/portfolio">Portfolio</a>
                         </NavItem>
 
                         <NavItem>
-                            <a href="/portfolio/contact">Contact</a>
+                            <a href="/contact">Contact</a>
                         </NavItem>
                     </NavList>
                 </NavWrapper>

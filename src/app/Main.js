@@ -14,10 +14,10 @@ export default class Main extends React.Component {
         return (
             <div className="wrapper">
                 <Nav />
-                <Route exact={true} path="/portfolio/" component={Home} />
-                <Route path="/portfolio/about" component={About} />
-                <Route path="/portfolio/contact" component={Contact} />
-                <Route path="/portfolio/portfolio" component={Portfolio} />
+                <Route exact={true} path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/portfolio" component={Portfolio} />
             </div>
         );
     }
