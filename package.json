@@ -21,7 +21,7 @@
     "build": "parcel build ./index.html",
     "start": "parcel ./index.html -p 1337",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --branch=master"
   },
   "repository": {
     "type": "git",
