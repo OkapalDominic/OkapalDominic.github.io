@@ -32698,7 +32698,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        background-image: url(https://source.unsplash.com/", "/480x800);\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center;\n\n        @media (min-width: 480px) {\n            background-image: url(https://source.unsplash.com/", "/768x1024);\n        }\n\n        @media (min-width: 768px) {\n            background-image: url(https://source.unsplash.com/", "/1280x800);\n        }\n\n        @media (min-width: 1280px) {\n            background-image: url(https://source.unsplash.com/", "/1600x900);\n        }\n\n        @media (min-width: 1600px) {\n            background-image: url(https://source.unsplash.com/", "/1920x1080);\n        }\n\n        &::before {\n            position: absolute;\n            top: 0;\n            left: 0;\n            z-index: 1;\n            content: '';\n            width: 100%;\n            height: 100%;\n            background-color: ", ";\n        }\n\n    "]);
+  var data = _taggedTemplateLiteral(["\n        background-image: url(", ");\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center;\n\n        @media (min-width: 480px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 768px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1280px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1600px) {\n            background-image: url(", ");\n        }\n\n        &::before {\n            position: absolute;\n            top: 0;\n            left: 0;\n            z-index: 1;\n            content: '';\n            width: 100%;\n            height: 100%;\n            background-color: ", ";\n        }\n\n    "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -32768,16 +32768,16 @@ var Section = _styledComponents.default.section(_templateObject(), function (pro
 }, function (props) {
   return (props.centered_v || props.centered_hv) && (0, _styledComponents.css)(_templateObject5());
 }, _Container.default, function (props) {
-  return props.image && (0, _styledComponents.css)(_templateObject6(), function (props) {
-    return props.image;
+  return props.images && (0, _styledComponents.css)(_templateObject6(), function (props) {
+    return props.images[4];
   }, function (props) {
-    return props.image;
+    return props.images[3];
   }, function (props) {
-    return props.image;
+    return props.images[2];
   }, function (props) {
-    return props.image;
+    return props.images[1];
   }, function (props) {
-    return props.image;
+    return props.images[0];
   }, function (props) {
     return props.overlay || '#00000066';
   });
@@ -32840,7 +32840,17 @@ exports.Subheading = Subheading;
 var Text = _styledComponents.default.p(_templateObject3());
 
 exports.Text = Text;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/App/pages/Home.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/images/home/1920x1080.jpg":[function(require,module,exports) {
+module.exports = "/1920x1080.a7c87062.jpg";
+},{}],"src/images/home/1600x900.jpg":[function(require,module,exports) {
+module.exports = "/1600x900.8eb3bbd3.jpg";
+},{}],"src/images/home/1280x800.jpg":[function(require,module,exports) {
+module.exports = "/1280x800.81118025.jpg";
+},{}],"src/images/home/768x1024.jpg":[function(require,module,exports) {
+module.exports = "/768x1024.e801f95d.jpg";
+},{}],"src/images/home/480x800.jpg":[function(require,module,exports) {
+module.exports = "/480x800.3fa5cc60.jpg";
+},{}],"src/App/pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32861,6 +32871,16 @@ var _Container = _interopRequireDefault(require("./../components/Container"));
 var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
+
+var _x = _interopRequireDefault(require("../../images/home/1920x1080.jpg"));
+
+var _x2 = _interopRequireDefault(require("../../images/home/1600x900.jpg"));
+
+var _x3 = _interopRequireDefault(require("../../images/home/1280x800.jpg"));
+
+var _x4 = _interopRequireDefault(require("../../images/home/768x1024.jpg"));
+
+var _x5 = _interopRequireDefault(require("../../images/home/480x800.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32901,7 +32921,8 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
-        image: "U0tBTn8UR8I"
+        images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
+        overlay: "#00000088"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
@@ -32916,7 +32937,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Home;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router":"node_modules/react-router/esm/react-router.js","./../components/Button":"src/App/components/Button.js","./../components/Container":"src/App/components/Container.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/App/components/Link.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router":"node_modules/react-router/esm/react-router.js","./../components/Button":"src/App/components/Button.js","./../components/Container":"src/App/components/Container.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/home/1920x1080.jpg":"src/images/home/1920x1080.jpg","../../images/home/1600x900.jpg":"src/images/home/1600x900.jpg","../../images/home/1280x800.jpg":"src/images/home/1280x800.jpg","../../images/home/768x1024.jpg":"src/images/home/768x1024.jpg","../../images/home/480x800.jpg":"src/images/home/480x800.jpg"}],"src/App/components/Link.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33000,7 +33021,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
-        image: "kCrrUx7US04"
+        image: "https://source.unsplash.com/kCrrUx7US04"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
@@ -33602,7 +33623,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59725" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56073" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
