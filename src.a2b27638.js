@@ -32965,7 +32965,19 @@ var Link = _styledComponents.default.a(_templateObject());
 
 var _default = Link;
 exports.default = _default;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/App/pages/About.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/images/about/profile.jpg":[function(require,module,exports) {
+module.exports = "/profile.adccfa41.jpg";
+},{}],"src/images/about/1920x1080.jpg":[function(require,module,exports) {
+module.exports = "/1920x1080.d6ca55da.jpg";
+},{}],"src/images/about/1600x900.jpg":[function(require,module,exports) {
+module.exports = "/1600x900.f4577243.jpg";
+},{}],"src/images/about/1280x800.jpg":[function(require,module,exports) {
+module.exports = "/1280x800.e9d52809.jpg";
+},{}],"src/images/about/768x1024.jpg":[function(require,module,exports) {
+module.exports = "/768x1024.0c5ae2b9.jpg";
+},{}],"src/images/about/480x800.jpg":[function(require,module,exports) {
+module.exports = "/480x800.811f6165.jpg";
+},{}],"src/App/pages/About.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32984,6 +32996,18 @@ var _Link = _interopRequireDefault(require("./../components/Link"));
 var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
+
+var _profile = _interopRequireDefault(require("../../images/about/profile.jpg"));
+
+var _x = _interopRequireDefault(require("../../images/about/1920x1080.jpg"));
+
+var _x2 = _interopRequireDefault(require("../../images/about/1600x900.jpg"));
+
+var _x3 = _interopRequireDefault(require("../../images/about/1280x800.jpg"));
+
+var _x4 = _interopRequireDefault(require("../../images/about/768x1024.jpg"));
+
+var _x5 = _interopRequireDefault(require("../../images/about/480x800.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33021,12 +33045,19 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
-        image: "https://source.unsplash.com/kCrrUx7US04"
-      }, _react.default.createElement(_Container.default, {
+        images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
+        overlay: "#00000088"
+      }, _react.default.createElement("img", {
+        src: _profile.default,
+        alt: "profile",
+        style: {
+          width: '15em'
+        }
+      }), _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
         color: "#eeee55"
-      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me"), _react.default.createElement(_Typography.Text, null, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, null, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement("a", {
+      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me"), _react.default.createElement(_Typography.Text, null, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, null, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement(_Link.default, {
         href: "mailto:dominic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com")));
     }
@@ -33036,7 +33067,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = About;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/App/components/AwesomeIcon.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/profile.jpg":"src/images/about/profile.jpg","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/App/components/AwesomeIcon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
