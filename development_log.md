@@ -8,7 +8,7 @@ I decided to create my portfolio site using React.
 
 I first found a basic tutorial that went through building a tic-tac-toe game in react.  This was helpful to start understanding how to use it, and I was able to put it on GitHub pages, but I soon moved on to finding a tutorial that would help me build a site.
 
-The first one I found was fairly old, and would have required too many changes to work with the current version.  So I eventually found [this][tutorial1] tutorial, which allowed me to build a working framework for my portfolio site.
+The first one I found was fairly old, and would have required too many changes to work with the current version of React.  So I eventually found [this][tutorial1] tutorial, which allowed me to build a working framework for my portfolio site.
 
 My first problem with the tutorial was with the global style.  The tutorial said to create it by making an injectGlobal template, and that would work.  Unfotunately I found out that [injectGlobal was removed][injectGlobal] and replaced with [createGlobalStyle][createGlobalStyle] in styled-components v4.  So I had to make that one small change to get the global style working.
 

@@ -9,8 +9,8 @@ import { Heading, Subheading, Text } from './../components/Typography';
 export default class About extends React.Component {
     render () {
         return (
-            <Section centered>
-                <Container>
+            <Section fullHeight image="kCrrUx7US04">
+                <Container centered_h padding_t="8%" color="#eeee55">
                     <Subheading>Dominic Okapal</Subheading>
 
                     <Heading>About Me</Heading>
