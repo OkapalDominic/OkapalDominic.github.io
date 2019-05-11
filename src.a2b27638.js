@@ -32633,12 +32633,32 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n        color: ", ";\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n        margin-right: auto;\n        margin-left: auto;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  padding-right: 15px;\n  padding-left: 15px;\n  margin-right: auto;\n  margin-left: auto;\n  width: 100%;\n\n  /* Breakpoint for tablets */\n  @media (min-width: 576px) {\n    max-width: 540px;\n  }\n\n  /* Breakpoint for small desktops */\n  @media (min-width: 768px) {\n    max-width: 720px;\n  }\n\n  /* Breakpoint for medium desktops */\n  @media (min-width: 992px) {\n    max-width: 960px;\n  }\n\n  /* Breakpoint for large desktops and HD devices */\n  @media (min-width: 1200px) {\n    max-width: 1140px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n    ", "\n\n    ", "\n\n    padding-top: ", ";\n    padding-right: 15px;\n    padding-left: 15px;\n    width: 100%;\n\n    /* Breakpoint for tablets */\n    @media (min-width: 576px) {\n      max-width: 540px;\n    }\n\n    /* Breakpoint for small desktops */\n    @media (min-width: 768px) {\n      max-width: 720px;\n    }\n\n    /* Breakpoint for medium desktops */\n    @media (min-width: 992px) {\n      max-width: 960px;\n    }\n\n    /* Breakpoint for large desktops and HD devices */\n    @media (min-width: 1200px) {\n      max-width: 1140px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32649,7 +32669,15 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.div(_templateObject());
+var Container = _styledComponents.default.div(_templateObject(), function (props) {
+  return props.centered_h && (0, _styledComponents.css)(_templateObject2());
+}, function (props) {
+  return props.color && (0, _styledComponents.css)(_templateObject3(), function (props) {
+    return props.color;
+  });
+}, function (props) {
+  return props.padding_t || 0;
+});
 
 var _default = Container;
 exports.default = _default;
@@ -32669,8 +32697,48 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n        background-image: url(https://source.unsplash.com/", "/480x800);\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center;\n\n        @media (min-width: 480px) {\n            background-image: url(https://source.unsplash.com/", "/768x1024);\n        }\n\n        @media (min-width: 768px) {\n            background-image: url(https://source.unsplash.com/", "/1280x800);\n        }\n\n        @media (min-width: 1280px) {\n            background-image: url(https://source.unsplash.com/", "/1600x900);\n        }\n\n        @media (min-width: 1600px) {\n            background-image: url(https://source.unsplash.com/", "/1920x1080);\n        }\n\n        &::before {\n            position: absolute;\n            top: 0;\n            left: 0;\n            z-index: 1;\n            content: '';\n            width: 100%;\n            height: 100%;\n            background-color: ", ";\n        }\n\n    "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n        justify-content: center;\n    "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n        align-items: center;\n    "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n        position: relative;\n        display: flex;\n        flex-direction: column;\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n        position: relative;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: center;\n        height: 100%;\n    "]);
+  var data = _taggedTemplateLiteral(["\n        height: 100%;\n    "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32680,7 +32748,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    ", "\n\n    ", " {\n        position: relative;\n        z-index: 2;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    ", "\n    \n    ", "\n    ", "\n\n    ", "\n\n    ", " {\n        position: relative;\n        z-index: 2;\n    }\n\n    ", "\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32692,8 +32760,28 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var Section = _styledComponents.default.section(_templateObject(), function (props) {
-  return props.centered && (0, _styledComponents.css)(_templateObject2());
-}, _Container.default);
+  return props.fullHeight && (0, _styledComponents.css)(_templateObject2());
+}, function (props) {
+  return (props.centered_h || props.centered_v || props.centered_hv) && (0, _styledComponents.css)(_templateObject3());
+}, function (props) {
+  return (props.centered_h || props.centered_hv) && (0, _styledComponents.css)(_templateObject4());
+}, function (props) {
+  return (props.centered_v || props.centered_hv) && (0, _styledComponents.css)(_templateObject5());
+}, _Container.default, function (props) {
+  return props.image && (0, _styledComponents.css)(_templateObject6(), function (props) {
+    return props.image;
+  }, function (props) {
+    return props.image;
+  }, function (props) {
+    return props.image;
+  }, function (props) {
+    return props.image;
+  }, function (props) {
+    return props.image;
+  }, function (props) {
+    return props.overlay || '#00000066';
+  });
+});
 
 var _default = Section;
 exports.default = _default;
@@ -32720,7 +32808,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 0;\n  margin-bottom: 0;\n  font-size: 24px;\n  font-weight: bold;\n\n  @media (min-width: 480px) {\n    font-size: 36px;\n  }\n\n  @media (min-width: 768px) {\n    font-size: 48px;\n  }\n\n  & + h1,\n  & + h2,\n  & + p {\n    margin-top: 21px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 0;\n  margin-bottom: 32px;\n  font-size: 24px;\n  font-weight: bold;\n\n  @media (min-width: 480px) {\n    font-size: 36px;\n  }\n\n  @media (min-width: 768px) {\n    font-size: 48px;\n  }\n\n  & + h1,\n  & + h2,\n  & + p {\n    margin-top: 21px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32794,20 +32882,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url(https://source.unsplash.com/t3zrEm88ehc/480x800);\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n\n  @media (min-width: 480px) {\n    background-image: url(https://source.unsplash.com/t3zrEm88ehc/768x1024);\n  }\n\n  @media (min-width: 768px) {\n    background-image: url(https://source.unsplash.com/t3zrEm88ehc/1280x800);\n  }\n\n  @media (min-width: 1280px) {\n    background-image: url(https://source.unsplash.com/t3zrEm88ehc/1600x900);\n  }\n\n  @media (min-width: 1600px) {\n    background-image: url(https://source.unsplash.com/t3zrEm88ehc/1920x1080);\n  }\n\n  &::before {\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 1;\n    content: '';\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, .4);\n  }\n\n  ", " {\n    color: #fff;\n  }\n\n  ", " {\n    margin-bottom: 32px;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var HomeWrapper = (0, _styledComponents.default)(_Section.default)(_templateObject(), _Container.default, _Typography.Subheading); // Using Button component but changing the element to 'a'
-
+// Using Button component but changing the element to 'a'
 var HomeButton = _Button.default.withComponent('a');
 
 var Home =
@@ -32824,9 +32899,14 @@ function (_React$Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(HomeWrapper, {
-        centered: true
-      }, _react.default.createElement(_Container.default, null, _react.default.createElement(_Typography.Heading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Subheading, null, "Designer & developer"), _react.default.createElement(HomeButton, {
+      return _react.default.createElement(_Section.default, {
+        fullHeight: true,
+        image: "U0tBTn8UR8I"
+      }, _react.default.createElement(_Container.default, {
+        centered_h: true,
+        padding_t: "8%",
+        color: "#fff"
+      }, _react.default.createElement(_Typography.Heading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Subheading, null, "Designer & developer"), _react.default.createElement(HomeButton, {
         href: "/portfolio"
       }, "My work")));
     }
@@ -32919,8 +32999,13 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement(_Section.default, {
-        centered: true
-      }, _react.default.createElement(_Container.default, null, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me"), _react.default.createElement(_Typography.Text, null, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, null, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement("a", {
+        fullHeight: true,
+        image: "kCrrUx7US04"
+      }, _react.default.createElement(_Container.default, {
+        centered_h: true,
+        padding_t: "8%",
+        color: "#eeee55"
+      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me"), _react.default.createElement(_Typography.Text, null, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, null, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement("a", {
         href: "mailto:dominic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com")));
     }
@@ -33517,7 +33602,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58609" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59725" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
