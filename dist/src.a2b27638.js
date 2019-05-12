@@ -33201,7 +33201,9 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Contact;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/AwesomeIcon":"src/App/components/AwesomeIcon.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/App/pages/Portfolio.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/AwesomeIcon":"src/App/components/AwesomeIcon.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/images/about/examples/capstone.jpg":[function(require,module,exports) {
+module.exports = "/capstone.c3ce5a82.jpg";
+},{}],"src/App/pages/Portfolio.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33220,6 +33222,8 @@ var _Link = _interopRequireDefault(require("./../components/Link"));
 var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
+
+var _capstone = _interopRequireDefault(require("../../images/about/examples/capstone.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33242,7 +33246,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n    display: block;\n    cursor: pointer;\n    width: 100%;\n\n    ", " {\n        //\n    }\n\n    @media (max-width: 767px) {\n        &:nth-child(n+2) {\n            margin-top: 16px;\n        }\n    }\n\n    @media (min-width: 768px) and (max-width: 991px) {\n        width: calc(50% - 32px);\n\n        &:nth-child(odd) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(even) {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+3) {\n            margin-top: 48px;\n        }\n    }\n\n    @media (min-width: 992px) {\n        width: calc(33.33333% - 32px);\n\n        &:first-child,\n        &:nth-child(4),\n        &:nth-child(7) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(2),\n        &:nth-child(4),\n        &:nth-child(8) {\n            margin-left: 16px;\n            margin-right: 16px;\n        }\n\n        &:nth-child(3),\n        &:nth-child(6),\n        &:last-child {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+4) {\n            margin-top: 24px;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: relative;\n    display: block;\n    cursor: pointer;\n    width: 100%;\n\n    &:focus,\n    &:hover {\n        ", " {\n            opacity: .3;\n        }\n        ", " {\n            opacity: 1;\n        }\n    }\n\n    @media (max-width: 767px) {\n        &:nth-child(n+2) {\n            margin-top: 16px;\n        }\n    }\n\n    @media (min-width: 768px) and (max-width: 991px) {\n        width: calc(50% - 32px);\n\n        &:nth-child(odd) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(even) {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+3) {\n            margin-top: 48px;\n        }\n    }\n\n    @media (min-width: 992px) {\n        width: calc(33.33333% - 32px);\n\n        &:first-child,\n        &:nth-child(4),\n        &:nth-child(7) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(2),\n        &:nth-child(4),\n        &:nth-child(8) {\n            margin-left: 16px;\n            margin-right: 16px;\n        }\n\n        &:nth-child(3),\n        &:nth-child(6),\n        &:last-child {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+4) {\n            margin-top: 24px;\n        }\n    }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -33252,7 +33256,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    opacity: 0;\n    transition: opacity .25s ease-in-out;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n\n    &:focus,\n    &:hover {\n        opacity: 1;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    opacity: 0;\n    transition: opacity .25s ease-in-out;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: black;\n    background-color: #ffffff99;\n    border: 1px solid #ffffff00;\n    border-radius: 10px;\n    text-align: center;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -33262,7 +33266,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    object-fit: contain;\n    transition: opacity .25s ease-in-out;\n\n    &:focus,\n    &:hover {\n        opacity: .5;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    object-fit: contain;\n    transition: opacity .25s ease-in-out;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -33299,9 +33303,9 @@ var PortfolioGrid = _styledComponents.default.div(_templateObject2());
 
 var PortfolioItemThumbnail = _styledComponents.default.img(_templateObject3());
 
-var PortfolioItemThumbnailText = _styledComponents.default.div(_templateObject4());
+var PortfolioItemThumbnailText = (0, _styledComponents.default)(_Typography.Text)(_templateObject4());
 
-var PortfolioItem = _styledComponents.default.a(_templateObject5(), PortfolioItemThumbnail);
+var PortfolioItem = _styledComponents.default.a(_templateObject5(), PortfolioItemThumbnail, PortfolioItemThumbnailText);
 
 var Portfolio =
 /*#__PURE__*/
@@ -33322,10 +33326,9 @@ function (_React$Component) {
       }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work.  If you want to see more, drop me an email."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
         href: ""
       }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/z4CAuzwaXrM/600x600",
-        srcSet: "https://source.unsplash.com/z4CAuzwaXrM/600x600 1x, https://source.unsplash.com/z4CAuzwaXrM/1200x1200 2x",
+        src: _capstone.default,
         alt: "Example of work"
-      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a thing.")), _react.default.createElement(PortfolioItem, {
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a mockup I made for my capstone project.  A webapp written with Angular for the VA.")), _react.default.createElement(PortfolioItem, {
         href: ""
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: "https://source.unsplash.com/-aDl1z8_nGY/600x600",
@@ -33383,7 +33386,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Portfolio;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/App/components/Nav.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/examples/capstone.jpg":"src/images/about/examples/capstone.jpg"}],"src/App/components/Nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33683,7 +33686,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65073" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65421" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

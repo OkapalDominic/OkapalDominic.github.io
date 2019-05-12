@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>Questionnaire</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<body class="w3-content" onload="randomize()" style="max-width:1300px;background:url('imgs/background.png') no-repeat center center fixed;background-size: cover;">
+
+<div class="w3-row">
+	<div class="w3-row w3-padding w3-margin">
+			<img class="w3-left w3-half" src="imgs/logo.png">
+		</div>
+</div>
+
+<div class="w3-row">
+
+  <div class="w3-rest w3-container">
+    <div class="w3-padding-64 w3-center">
+			<a href="login.html" class="w3-button w3-green w3-round-large w3-large">Finish Questionnaire</a>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+    function randomize() {
+        var screenerPossibilities = ["Absent", "Acute Constant", "Acute Temporary", "Acute Intermittent", "Acute Occasional",
+                                     "Chronic Constant", "Chronic Temporary", "Chronic Intermittent", "Chronic Occasional"];
+	    var Atot, Btot;
+	    var tolerance_num;
+	    var thsc_string;
+
+	    var TFI_I, TFI_Sc, TFI_C, TFI_Sl, TFI_A, TFI_R, TFI_Q, TFI_E, TFI_tot;
+        var tmp;
+
+        if(typeof(Storage) !== "undefined") {
+            sessionStorage.setItem("QuestComp", true);
+            sessionStorage.setItem("TS", screenerPossibilities[Math.floor(Math.random() * 9)]);
+
+            sessionStorage.setItem("Atot", Math.floor(Math.random() * 17));
+            sessionStorage.setItem("Btot", Math.floor(Math.random() * 17));
+
+            tolerance_num = Math.floor(Math.random() * 5);
+            sessionStorage.setItem("Cnum", tolerance_num);
+            if(tolerance_num !== 0) {
+                sessionStorage.setItem("Cex", "car starting, TV volume.");
+            }
+
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_I", tmp[0]);
+            TFI_tot = tmp[1];
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_Sc", tmp[0]);
+            TFI_tot += tmp[1];
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_C", tmp[0]);
+            TFI_tot += tmp[1];
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_Sl", tmp[0]);
+            TFI_tot += tmp[1];
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_A", tmp[0]);
+            TFI_tot += tmp[1];
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_R", tmp[0]);
+            TFI_tot += tmp[1];
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_Q", tmp[0]);
+            TFI_tot += tmp[1];
+            tmp = calc_tfi_sub();
+            sessionStorage.setItem("TFI_E", tmp[0]);
+            TFI_tot += tmp[1];
+            TFI_tot = (TFI_tot / 25) * 10;
+            sessionStorage.setItem("TFI_tot", TFI_tot);
+        }
+    }
+
+    function calc_tfi_sub() {
+        var tmp = Math.floor(Math.random() * 11) + Math.floor(Math.random() * 11) + Math.floor(Math.random() * 11);
+        var sub = (tmp / 3) * 10;
+        return [sub, tmp];
+    }
+</script>
+
+</body>
+</html>

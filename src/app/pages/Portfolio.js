@@ -6,6 +6,11 @@ import Link from './../components/Link';
 import Section from './../components/Section';
 import { Heading, Subheading, Text } from './../components/Typography';
 
+// Import images
+
+// Import example thumbnails
+import capstone from '../../images/about/examples/capstone.jpg';
+
 const PortfolioWrapper = styled(Section)`
     padding-top: 120px;
     padding-bottom: 80px;
@@ -22,25 +27,20 @@ const PortfolioItemThumbnail = styled.img`
     max-width: 100%;
     object-fit: contain;
     transition: opacity .25s ease-in-out;
-
-    &:focus,
-    &:hover {
-        opacity: .5;
-    }
 `
 
-const PortfolioItemThumbnailText = styled.div`
+const PortfolioItemThumbnailText = styled(Text)`
     opacity: 0;
     transition: opacity .25s ease-in-out;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    &:focus,
-    &:hover {
-        opacity: 1;
-    }
+    color: black;
+    background-color: #ffffff99;
+    border: 1px solid #ffffff00;
+    border-radius: 10px;
+    text-align: center;
 `
 
 const PortfolioItem = styled.a`
@@ -49,8 +49,14 @@ const PortfolioItem = styled.a`
     cursor: pointer;
     width: 100%;
 
-    ${PortfolioItemThumbnail} {
-        //
+    &:focus,
+    &:hover {
+        ${PortfolioItemThumbnail} {
+            opacity: .3;
+        }
+        ${PortfolioItemThumbnailText} {
+            opacity: 1;
+        }
     }
 
     @media (max-width: 767px) {
@@ -119,11 +125,12 @@ export default class Portfolio extends React.Component {
                     <PortfolioGrid>
                         <PortfolioItem href="">
                             <PortfolioItemThumbnail
-                                src="https://source.unsplash.com/z4CAuzwaXrM/600x600"
-                                srcSet="https://source.unsplash.com/z4CAuzwaXrM/600x600 1x, https://source.unsplash.com/z4CAuzwaXrM/1200x1200 2x"
+                                src={capstone}
                                 alt="Example of work"
                             />
-                            <PortfolioItemThumbnailText>This is a thing.</PortfolioItemThumbnailText>
+                            <PortfolioItemThumbnailText>
+                                This is a mockup I made for my capstone project.  A webapp written with Angular for the VA.
+                            </PortfolioItemThumbnailText>
                         </PortfolioItem>
                         <PortfolioItem href="">
                             <PortfolioItemThumbnail src="https://source.unsplash.com/-aDl1z8_nGY/600x600" srcSet="https://source.unsplash.com/-aDl1z8_nGY/600x600 1x, https://source.unsplash.com/-aDl1z8_nGY/1200x1200 2x" alt="Example of work" />
