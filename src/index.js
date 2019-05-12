@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
         font: 1rem / 1.414 arial, sans-serif;
-        background-color: #999999;
+        background-color: #000;
     }
 `
 

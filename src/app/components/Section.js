@@ -25,26 +25,26 @@ const Section = styled.section`
         z-index: 2;
     }
 
-    ${props => props.image && css`
-        background-image: url(https://source.unsplash.com/${props => props.image}/480x800);
+    ${props => props.images && css`
+        background-image: url(${props => props.images[4]});
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
 
         @media (min-width: 480px) {
-            background-image: url(https://source.unsplash.com/${props => props.image}/768x1024);
+            background-image: url(${props => props.images[3]});
         }
 
         @media (min-width: 768px) {
-            background-image: url(https://source.unsplash.com/${props => props.image}/1280x800);
+            background-image: url(${props => props.images[2]});
         }
 
         @media (min-width: 1280px) {
-            background-image: url(https://source.unsplash.com/${props => props.image}/1600x900);
+            background-image: url(${props => props.images[1]});
         }
 
         @media (min-width: 1600px) {
-            background-image: url(https://source.unsplash.com/${props => props.image}/1920x1080);
+            background-image: url(${props => props.images[0]});
         }
 
         &::before {

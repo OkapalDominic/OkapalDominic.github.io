@@ -32698,7 +32698,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        background-image: url(https://source.unsplash.com/", "/480x800);\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center;\n\n        @media (min-width: 480px) {\n            background-image: url(https://source.unsplash.com/", "/768x1024);\n        }\n\n        @media (min-width: 768px) {\n            background-image: url(https://source.unsplash.com/", "/1280x800);\n        }\n\n        @media (min-width: 1280px) {\n            background-image: url(https://source.unsplash.com/", "/1600x900);\n        }\n\n        @media (min-width: 1600px) {\n            background-image: url(https://source.unsplash.com/", "/1920x1080);\n        }\n\n        &::before {\n            position: absolute;\n            top: 0;\n            left: 0;\n            z-index: 1;\n            content: '';\n            width: 100%;\n            height: 100%;\n            background-color: ", ";\n        }\n\n    "]);
+  var data = _taggedTemplateLiteral(["\n        background-image: url(", ");\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center;\n\n        @media (min-width: 480px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 768px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1280px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1600px) {\n            background-image: url(", ");\n        }\n\n        &::before {\n            position: absolute;\n            top: 0;\n            left: 0;\n            z-index: 1;\n            content: '';\n            width: 100%;\n            height: 100%;\n            background-color: ", ";\n        }\n\n    "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -32768,16 +32768,16 @@ var Section = _styledComponents.default.section(_templateObject(), function (pro
 }, function (props) {
   return (props.centered_v || props.centered_hv) && (0, _styledComponents.css)(_templateObject5());
 }, _Container.default, function (props) {
-  return props.image && (0, _styledComponents.css)(_templateObject6(), function (props) {
-    return props.image;
+  return props.images && (0, _styledComponents.css)(_templateObject6(), function (props) {
+    return props.images[4];
   }, function (props) {
-    return props.image;
+    return props.images[3];
   }, function (props) {
-    return props.image;
+    return props.images[2];
   }, function (props) {
-    return props.image;
+    return props.images[1];
   }, function (props) {
-    return props.image;
+    return props.images[0];
   }, function (props) {
     return props.overlay || '#00000066';
   });
@@ -32840,7 +32840,17 @@ exports.Subheading = Subheading;
 var Text = _styledComponents.default.p(_templateObject3());
 
 exports.Text = Text;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/App/pages/Home.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/images/home/1920x1080.jpg":[function(require,module,exports) {
+module.exports = "/1920x1080.a7c87062.jpg";
+},{}],"src/images/home/1600x900.jpg":[function(require,module,exports) {
+module.exports = "/1600x900.8eb3bbd3.jpg";
+},{}],"src/images/home/1280x800.jpg":[function(require,module,exports) {
+module.exports = "/1280x800.81118025.jpg";
+},{}],"src/images/home/768x1024.jpg":[function(require,module,exports) {
+module.exports = "/768x1024.e801f95d.jpg";
+},{}],"src/images/home/480x800.jpg":[function(require,module,exports) {
+module.exports = "/480x800.3fa5cc60.jpg";
+},{}],"src/App/pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32861,6 +32871,16 @@ var _Container = _interopRequireDefault(require("./../components/Container"));
 var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
+
+var _x = _interopRequireDefault(require("../../images/home/1920x1080.jpg"));
+
+var _x2 = _interopRequireDefault(require("../../images/home/1600x900.jpg"));
+
+var _x3 = _interopRequireDefault(require("../../images/home/1280x800.jpg"));
+
+var _x4 = _interopRequireDefault(require("../../images/home/768x1024.jpg"));
+
+var _x5 = _interopRequireDefault(require("../../images/home/480x800.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32901,7 +32921,8 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
-        image: "U0tBTn8UR8I"
+        images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
+        overlay: "#00000088"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
@@ -32916,7 +32937,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Home;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router":"node_modules/react-router/esm/react-router.js","./../components/Button":"src/App/components/Button.js","./../components/Container":"src/App/components/Container.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/App/components/Link.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router":"node_modules/react-router/esm/react-router.js","./../components/Button":"src/App/components/Button.js","./../components/Container":"src/App/components/Container.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/home/1920x1080.jpg":"src/images/home/1920x1080.jpg","../../images/home/1600x900.jpg":"src/images/home/1600x900.jpg","../../images/home/1280x800.jpg":"src/images/home/1280x800.jpg","../../images/home/768x1024.jpg":"src/images/home/768x1024.jpg","../../images/home/480x800.jpg":"src/images/home/480x800.jpg"}],"src/App/components/Link.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32944,7 +32965,19 @@ var Link = _styledComponents.default.a(_templateObject());
 
 var _default = Link;
 exports.default = _default;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/App/pages/About.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/images/about/profile.jpg":[function(require,module,exports) {
+module.exports = "/profile.adccfa41.jpg";
+},{}],"src/images/about/1920x1080.jpg":[function(require,module,exports) {
+module.exports = "/1920x1080.d6ca55da.jpg";
+},{}],"src/images/about/1600x900.jpg":[function(require,module,exports) {
+module.exports = "/1600x900.f4577243.jpg";
+},{}],"src/images/about/1280x800.jpg":[function(require,module,exports) {
+module.exports = "/1280x800.e9d52809.jpg";
+},{}],"src/images/about/768x1024.jpg":[function(require,module,exports) {
+module.exports = "/768x1024.0c5ae2b9.jpg";
+},{}],"src/images/about/480x800.jpg":[function(require,module,exports) {
+module.exports = "/480x800.811f6165.jpg";
+},{}],"src/App/pages/About.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32963,6 +32996,18 @@ var _Link = _interopRequireDefault(require("./../components/Link"));
 var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
+
+var _profile = _interopRequireDefault(require("../../images/about/profile.jpg"));
+
+var _x = _interopRequireDefault(require("../../images/about/1920x1080.jpg"));
+
+var _x2 = _interopRequireDefault(require("../../images/about/1600x900.jpg"));
+
+var _x3 = _interopRequireDefault(require("../../images/about/1280x800.jpg"));
+
+var _x4 = _interopRequireDefault(require("../../images/about/768x1024.jpg"));
+
+var _x5 = _interopRequireDefault(require("../../images/about/480x800.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32984,6 +33029,20 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 50%;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ProfileImage = _styledComponents.default.img(_templateObject());
+
 var About =
 /*#__PURE__*/
 function (_React$Component) {
@@ -33000,12 +33059,20 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
-        image: "kCrrUx7US04"
+        images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
+        overlay: "#00000088"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
         color: "#eeee55"
-      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me"), _react.default.createElement(_Typography.Text, null, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, null, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement("a", {
+      }, _react.default.createElement("div", {
+        style: {
+          float: 'left'
+        }
+      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me")), _react.default.createElement(ProfileImage, {
+        src: _profile.default,
+        alt: "profile"
+      }), _react.default.createElement(_Typography.Text, null, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, null, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement(_Link.default, {
         href: "mailto:dominic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com")));
     }
@@ -33015,7 +33082,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = About;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/App/components/AwesomeIcon.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/profile.jpg":"src/images/about/profile.jpg","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/App/components/AwesomeIcon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33174,8 +33241,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    position: relative;\n    display: block;\n    cursor: pointer;\n    width: 100%;\n\n    ", " {\n        //\n    }\n\n    @media (max-width: 767px) {\n        &:nth-child(n+2) {\n            margin-top: 16px;\n        }\n    }\n\n    @media (min-width: 768px) and (max-width: 991px) {\n        width: calc(50% - 32px);\n\n        &:nth-child(odd) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(even) {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+3) {\n            margin-top: 48px;\n        }\n    }\n\n    @media (min-width: 992px) {\n        width: calc(33.33333% - 32px);\n\n        &:first-child,\n        &:nth-child(4),\n        &:nth-child(7) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(2),\n        &:nth-child(4),\n        &:nth-child(8) {\n            margin-left: 16px;\n            margin-right: 16px;\n        }\n\n        &:nth-child(3),\n        &:nth-child(6),\n        &:last-child {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+4) {\n            margin-top: 24px;\n        }\n    }\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    object-fit: contain;\n"]);
+  var data = _taggedTemplateLiteral(["\n    opacity: 0;\n    transition: opacity .25s ease-in-out;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n\n    &:focus,\n    &:hover {\n        opacity: 1;\n    }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -33185,7 +33262,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    display: block;\n    cursor: pointer;\n    width: 100%;\n    transition: opacity .25s ease-in-out;\n\n    &:focus,\n    &:hover {\n        opacity: .5;\n    }\n\n    @media (max-width: 767px) {\n        &:nth-child(n+2) {\n            margin-top: 16px;\n        }\n    }\n\n    @media (min-width: 768px) and (max-width: 991px) {\n        width: calc(50% - 32px);\n\n        &:nth-child(odd) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(even) {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+3) {\n            margin-top: 48px;\n        }\n    }\n\n    @media (min-width: 992px) {\n        width: calc(33.33333% - 32px);\n\n        &:first-child,\n        &:nth-child(4),\n        &:nth-child(7) {\n            margin-right: 32px;\n        }\n\n        &:nth-child(2),\n        &:nth-child(4),\n        &:nth-child(8) {\n            margin-left: 16px;\n            margin-right: 16px;\n        }\n\n        &:nth-child(3),\n        &:nth-child(6),\n        &:last-child {\n            margin-left: 32px;\n        }\n\n        &:nth-child(n+4) {\n            margin-top: 24px;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n    object-fit: contain;\n    transition: opacity .25s ease-in-out;\n\n    &:focus,\n    &:hover {\n        opacity: .5;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -33205,7 +33282,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding-top: 120px;\n    padding-bottom: 80px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-top: 120px;\n    padding-bottom: 80px;\n    background-color: #999;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33220,9 +33297,11 @@ var PortfolioWrapper = (0, _styledComponents.default)(_Section.default)(_templat
 
 var PortfolioGrid = _styledComponents.default.div(_templateObject2());
 
-var PortfolioItem = _styledComponents.default.a(_templateObject3());
+var PortfolioItemThumbnail = _styledComponents.default.img(_templateObject3());
 
-var PortfolioItemThumbnail = _styledComponents.default.img(_templateObject4());
+var PortfolioItemThumbnailText = _styledComponents.default.div(_templateObject4());
+
+var PortfolioItem = _styledComponents.default.a(_templateObject5(), PortfolioItemThumbnail);
 
 var Portfolio =
 /*#__PURE__*/
@@ -33238,13 +33317,15 @@ function (_React$Component) {
   _createClass(Portfolio, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(PortfolioWrapper, null, _react.default.createElement(_Container.default, null, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work.  If you want to see more, drop me an email."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
+      return _react.default.createElement(PortfolioWrapper, null, _react.default.createElement(_Container.default, {
+        centered_h: true
+      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work.  If you want to see more, drop me an email."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
         href: ""
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: "https://source.unsplash.com/z4CAuzwaXrM/600x600",
         srcSet: "https://source.unsplash.com/z4CAuzwaXrM/600x600 1x, https://source.unsplash.com/z4CAuzwaXrM/1200x1200 2x",
         alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a thing.")), _react.default.createElement(PortfolioItem, {
         href: ""
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: "https://source.unsplash.com/-aDl1z8_nGY/600x600",
@@ -33555,7 +33636,7 @@ var _Main = _interopRequireDefault(require("./App/Main"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    html,\n    body,\n    #app,\n    .wrapper {\n        min-height: 100vh;\n        height: 100%;\n        padding: 0;\n        margin: 0;\n    }\n\n    html {\n        box-sizing: border-box;\n        font-size: 100%;\n        padding: 0;\n        margin: 0;\n    }\n\n    * {\n        &,\n        &::after,\n        &::before {\n            box-sizing: inherit;\n            padding: 0;\n            margin: 0;\n        }\n    }\n\n    body {\n        padding: 0;\n        margin: 0;\n        font: 1rem / 1.414 arial, sans-serif;\n        background-color: #999999;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    html,\n    body,\n    #app,\n    .wrapper {\n        min-height: 100vh;\n        height: 100%;\n        padding: 0;\n        margin: 0;\n    }\n\n    html {\n        box-sizing: border-box;\n        font-size: 100%;\n        padding: 0;\n        margin: 0;\n    }\n\n    * {\n        &,\n        &::after,\n        &::before {\n            box-sizing: inherit;\n            padding: 0;\n            margin: 0;\n        }\n    }\n\n    body {\n        padding: 0;\n        margin: 0;\n        font: 1rem / 1.414 arial, sans-serif;\n        background-color: #000;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33602,7 +33683,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59725" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65073" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

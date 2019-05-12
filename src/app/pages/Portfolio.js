@@ -9,6 +9,7 @@ import { Heading, Subheading, Text } from './../components/Typography';
 const PortfolioWrapper = styled(Section)`
     padding-top: 120px;
     padding-bottom: 80px;
+    background-color: #999;
 `
 
 const PortfolioGrid = styled.div`
@@ -17,15 +18,39 @@ const PortfolioGrid = styled.div`
     flex-wrap: wrap;
 `
 
-const PortfolioItem = styled.a`
-    display: block;
-    cursor: pointer;
-    width: 100%;
+const PortfolioItemThumbnail = styled.img`
+    max-width: 100%;
+    object-fit: contain;
     transition: opacity .25s ease-in-out;
 
     &:focus,
     &:hover {
         opacity: .5;
+    }
+`
+
+const PortfolioItemThumbnailText = styled.div`
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:focus,
+    &:hover {
+        opacity: 1;
+    }
+`
+
+const PortfolioItem = styled.a`
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+
+    ${PortfolioItemThumbnail} {
+        //
     }
 
     @media (max-width: 767px) {
@@ -78,16 +103,11 @@ const PortfolioItem = styled.a`
     }
 `
 
-const PortfolioItemThumbnail = styled.img`
-    max-width: 100%;
-    object-fit: contain;
-`
-
 export default class Portfolio extends React.Component {
     render() {
         return (
             <PortfolioWrapper>
-                <Container>
+                <Container centered_h>
                     <Subheading>Dominic Okapal</Subheading>
 
                     <Heading>My work</Heading>
@@ -103,6 +123,7 @@ export default class Portfolio extends React.Component {
                                 srcSet="https://source.unsplash.com/z4CAuzwaXrM/600x600 1x, https://source.unsplash.com/z4CAuzwaXrM/1200x1200 2x"
                                 alt="Example of work"
                             />
+                            <PortfolioItemThumbnailText>This is a thing.</PortfolioItemThumbnailText>
                         </PortfolioItem>
                         <PortfolioItem href="">
                             <PortfolioItemThumbnail src="https://source.unsplash.com/-aDl1z8_nGY/600x600" srcSet="https://source.unsplash.com/-aDl1z8_nGY/600x600 1x, https://source.unsplash.com/-aDl1z8_nGY/1200x1200 2x" alt="Example of work" />
