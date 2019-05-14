@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<title>Admin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<body class="w3-content" style="max-width:1300px;background:url('background.png') no-repeat center center fixed;background-size: cover;" onload="randomize()">
+
+<div class="w3-row">
+      <img class="w3-left w3-padding w3-margin" src="logo.png" style="height:10em">
+</div>
+<div class="w3-row">
+    <a href="#" class="w3-button w3-green" onclick="randomize()">Randomize</a>
+</div>
+<div class="w3-row">
+  
+  <div class="w3-rest w3-container w3-white">
+      <h1>Patient Summary</h1>
+      <div class="w3-center w3-padding-large">
+	      <h2>Tinnitus Screener</h2>
+		  <p id="tinnitusScreener"></p>
+		  
+		  <h2>Tinnitus and Hearing Survey</h2>
+		  <p id="THSA"></p>
+		  <p id="THSB"></p>
+		  <p id="indicates"></p>
+		  <p id="THSC"></p>
+		  
+		  <h2>Tinnitus Functional Index</h2>
+		  <p id="Overall"></p>
+		  <p id="I"></p>
+		  <p id="Sc"></p>
+		  <p id="C"></p>
+		  <p id="Sl"></p>
+		  <p id="A"></p>
+		  <p id="R"></p>
+		  <p id="Q"></p>
+		  <p id="E"></p>
+      </div>
+  </div>
+  
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+  <p>Footer</p>
+</footer>
+
+<script>
+/*jslint browser:true */
+function randomize() {
+    'use strict';
+    var tinnitusScreener = document.getElementById("tinnitusScreener"),
+	    THSA = document.getElementById("THSA"),
+        THSB = document.getElementById("THSB"),
+		indicates = document.getElementById("indicates"),
+		THSC = document.getElementById("THSC"),
+		Overall = document.getElementById("Overall"),
+		I = document.getElementById("I"),
+		Sc = document.getElementById("Sc"),
+		C = document.getElementById("C"),
+		Sl = document.getElementById("Sl"),
+		A = document.getElementById("A"),
+		R = document.getElementById("R"),
+		Q = document.getElementById("Q"),
+		E = document.getElementById("E");
+
+    var screenerPossibilities = ["Absent", "Acute Constant", "Acute Temporary", "Acute Intermittent", "Acute Occasional", "Chronic Constant", "Chronic Temporary", "Chronic Intermittent", "Chronic Occasional"];
+	var Atot, Btot;
+	var ths_tolerance = ["not a problem.", "a small problem.", "a moderate problem.", "a big problem.", "a very big problem."];
+	var tolerance_num;
+	var thsc_string;
+
+	var TFI_I, TFI_Sc, TFI_C, TFI_Sl, TFI_A, TFI_R, TFI_Q, TFI_E, TFI_tot;
+	var tmp;
+	
+	tinnitusScreener.innerHTML = screenerPossibilities[Math.floor(Math.random() * 9)];
+	
+	Atot = Math.floor(Math.random() * 17);
+	Btot = Math.floor(Math.random() * 17);
+	THSA.innerHTML = "Section A: " + Atot;
+	THSB.innerHTML = "Section B: " + Btot;
+	if(Btot < Atot) {
+	    indicates.innerHTML = "This indicates more of a tinnitus problem.";
+	}
+	else if(Atot < Btot){
+	    indicates.innerHTML = "This indicates more of a hearing problem.";
+	}
+	else {
+	    indicates.innerHTML = "This indicates both tinnitus and hearing problem.";
+	}
+	if(Atot == 0) {
+	    indicates.innerHTML = "This indicates a hearing problem.";
+	}
+	if(Btot == 0) {
+	    indicates.innerHTML = "This indicates a tinnitus problem.";
+	}
+	if(Atot == 0 && Btot == 0) {
+	    indicates.innerHTML = "This indicates no hearing or tinnitus problems.";
+	}
+	tolerance_num = Math.floor(Math.random() * 5);
+	thsc_string = "Over the last week, sounds being too loud or uncomfortable were " + ths_tolerance[tolerance_num];
+	if(tolerance_num !== 0) {
+		thsc_string += "<p>Examples: car starting, TV volume.</p>"
+	}
+	THSC.innerHTML = thsc_string;
+
+	tmp = calc_tfi_sub();
+	TFI_I = tmp[1];
+	TFI_tot = tmp[0];
+	tmp = calc_tfi_sub();
+	TFI_Sc = tmp[1];
+	TFI_tot += tmp[0];
+	tmp = calc_tfi_sub();
+	TFI_C = tmp[1];
+	TFI_tot += tmp[0];
+	tmp = calc_tfi_sub();
+	TFI_Sl = tmp[1];
+	TFI_tot += tmp[0];
+	tmp = calc_tfi_sub();
+	TFI_A = tmp[1];
+	TFI_tot += tmp[0];
+	tmp = calc_tfi_sub();
+	TFI_R = tmp[1];
+	TFI_tot += tmp[0];
+	tmp = calc_tfi_sub();
+	TFI_Q = tmp[1];
+	TFI_tot += tmp[0];
+	tmp = calc_tfi_sub();
+	TFI_E = tmp[1];
+	TFI_tot += tmp[0];
+	TFI_tot = (TFI_tot / 25) * 10;
+
+	Overall.innerHTML = "Overall TFI score: " + TFI_tot;
+	I.innerHTML = "I (INTRUSIVE): " + TFI_I;
+	Sc.innerHTML = "Sc (SENSE OF CONTROL): " + TFI_Sc;
+	C.innerHTML = "C (COGNITIVE): " + TFI_C;
+	Sl.innerHTML = "Sl (SLEEP): " + TFI_Sl;
+	A.innerHTML = "A (AUDITORY): " + TFI_A;
+	R.innerHTML = "R (RELAXATION): " + TFI_R;
+	Q.innerHTML = "Q (QUALITY OF LIFE): " + TFI_Q;
+	E.innerHTML = "E (EMOTIONAL): " + TFI_E;
+}
+
+function calc_tfi_sub() {
+	var tmp = Math.floor(Math.random() * 11) + Math.floor(Math.random() * 11) + Math.floor(Math.random() * 11);
+	var sub = (tmp / 3) * 10;
+	return [sub, tmp];
+}
+</script>
+
+</body>
+</html>

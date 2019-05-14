@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Admin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<body class="w3-content"
+    style="max-width:1300px;background:url('imgs/background.png') no-repeat center center fixed;background-size: cover;">
+
+    <!--TOP-->
+    <div class="w3-row w3-padding w3-margin">
+        <div class="w3-container w3-cell">
+            <img class="w3-left w3-half" src="imgs/logo.png">
+        </div>
+        <div class="w3-container w3-cell">
+            <div class="w3-right w3-text-white w3-jumbo w3-cell-middle">ADMIN</div>
+            <a href="index.html" class="w3-text-white w3-right" onclick="sessionStorage.clear();">Logout</a>
+        </div>
+    </div>
+
+    <!--NAVIGATION TABS-->
+    <div class="w3-row">
+        <div class="w3-quarter w3-container w3-center">
+            <div>
+                <div id="spreadNav" class="w3-button w3-blue w3-block w3-hover-red w3-padding-16 navs"
+                    onclick="changeTab('spread', 'spreadNav')">Generate Spreadsheet</div>
+                <div id="dataNav" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16 navs"
+                    onclick="changeTab('data', 'dataNav')">Database Search</div>
+                <div id="patientNav" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16 navs"
+                     onclick="changeTab('patient', 'patientNav')">Patient Search</div>
+                <div id="accountsNav" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16 navs"
+                     onclick="changeTab('accounts', 'accountsNav')">Account Admin</div>
+            </div>
+        </div>
+
+        <!--Generate Spreadsheet-->
+        <div id="spread" class="w3-rest tabs">
+            <div class="w3-center">
+                <h1 class="w3-white">Generate Spreadsheet</h1>
+                <div class="w3-center w3-padding-large">
+                    <div class="w3-padding-64">
+                        <div class="w3-button w3-blue w3-round-large w3-hover-indigo">Download Spreadsheet</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Database Search-->
+        <div id="data" class="w3-rest tabs" style="display:none">
+            <div class="w3-center">
+                <h1 class="w3-white">Database Search</h1>
+                <div class="w3-bar w3-white">
+                    <select class="w3-bar-item w3-select" id="searchCat" onchange="updateSub()">
+                        <option value="" disabled selected>Choose an attribute</option>
+                        <option value="TSType">Tinnitus Screener Type</option>
+                        <option value="TFIOS">Tinnitus Functional Index Overall Score</option>
+                        <option value="AudType">Audiogram Type</option>
+                        <option value="OtoType">Otoscopy Type</option>
+                        <option value="TympType">Tympanometry Type</option>
+                    </select>
+                    <select class="w3-bar-item w3-select" id="searchSub">
+                        <option value="" disabled selected>Choose a type</option>
+                    </select>
+                    <div class="w3-bar-item w3-button w3-border-left"><i class="fas fa-search"></i></div>
+                </div>
+                <table class="w3-table-all">
+                    <thead>
+                        <tr class="w3-blue">
+                            <th>Patient ID</th>
+                            <th>Trouble sleeping</th>
+                            <th>Trouble focusing</th>
+                            <th>Pizzas eaten</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>1234</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4567</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>77</td>
+                    </tr>
+                    <tr>
+                        <td>7893</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1,000,001</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--Patient Search-->
+        <div id="patient" class="w3-rest tabs" style="display:none">
+            <div class="w3-center">
+                <h1 class="w3-white">Patient Search</h1>
+                <div class="w3-bar w3-white">
+                    <input class="w3-bar-item w3-input" placeholder="Patient ID">
+                    <div class="w3-bar-item w3-button w3-border-left"><i class="fas fa-search"></i></div>
+                </div>
+                <table class="w3-table-all">
+                    <thead>
+                    <tr class="w3-blue">
+                        <th>Patient ID</th>
+                        <th>Appointment Date</th>
+                        <th>Audiologist ID</th>
+                        <th>Summary</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>7893</td>
+                        <td>1/5/2019</td>
+                        <td>15</td>
+                        <td><div class="w3-button w3-blue w3-round-large w3-hover-indigo" onclick="window.location='http://localhost:3000/aud-login'">View Summary</div></td>
+                        <td><div class="w3-button w3-blue w3-round-large w3-hover-indigo">Delete</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div id="accounts" class="w3-rest tabs" style="display:none">
+            <div class="w3-center">
+                <h1 class="w3-white">Accounts Search</h1>
+                <div class="w3-bar w3-white">
+                    <input class="w3-bar-item w3-input" placeholder="Account ID">
+                    <div class="w3-bar-item w3-button w3-border-left"><i class="fas fa-search"></i></div>
+                </div>
+                <div class="w3-button w3-blue w3-round-large w3-hover-indigo">Create New Account</div>
+                <table class="w3-table-all">
+                    <thead>
+                        <tr class="w3-blue">
+                            <th>Account ID</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>7893</td>
+                        <td>Elijah</td>
+                        <td>amstudios@gmail.com</td>
+                        <td>Audiologist</td>
+                        <td><div class="w3-button w3-blue w3-round-large w3-hover-indigo">Edit</div><div class="w3-button w3-blue w3-round-large w3-hover-indigo">Delete</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function changeTab(tabName, navName) {
+            var i, tabs = document.getElementsByClassName("tabs"),
+                navs = document.getElementsByClassName("navs"),
+                nav = document.getElementById(navName);
+
+            for (i = 0; i < tabs.length; i += 1) {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+
+            for (i = 0; i < navs.length; i += 1) {
+                navs[i].classList.replace('w3-blue', 'w3-black');
+                navs[i].classList.replace('w3-hover-red', 'w3-hover-blue-grey');
+            }
+            nav.classList.replace('w3-black', 'w3-blue');
+            nav.classList.replace('w3-hover-blue-grey', 'w3-hover-red');
+        }
+    </script>
+
+    <script>
+        function updateSub() {
+            var mainCat = document.getElementById("searchCat");
+            
+            switch (mainCat.options[mainCat.selectedIndex].value) {
+                case "TSType":
+                    tsType();
+                    break;
+                case "TFIOS":
+                    tfiOS();
+                    break;
+                case "AudType":
+                    audtypes();
+                    break;
+                case "OtoType":
+                    ototypes();
+                    break;
+                case "TympType":
+                    tymptypes();
+                    break;
+                default:
+                    clearSubs();
+            }
+        }
+
+        function clearSubs() {
+            var searchSub = document.getElementById("searchSub").innerHTML = "<option value='' disabled selected>Choose a type</option>";
+        }
+
+        function tsType() {
+            clearSubs();
+            var searchSub = document.getElementById("searchSub");
+            var items = ["Absent", "Acute Constant", "Acute Temporary", "Acute Intermittent", "Acute Occasional",
+                "Chronic Constant", "Chronic Temporary", "Chronic Intermittent", "Chronic Occasional"];
+
+            for (let i = 0; i < items.length; i += 1) {
+                searchSub.innerHTML += "<option>" + items[i] + "</option>";
+            }
+        }
+
+        function tfiOS() {
+            clearSubs();
+            var searchSub = document.getElementById("searchSub");
+            var items = ["0-10", "11-20", "21-30", "31-40", "41-50", "51-60", "61-70", "71-80", "81-90", "91-100"];
+
+            for (let i = 0; i < items.length; i += 1) {
+                searchSub.innerHTML += "<option>" + items[i] + "</option>";
+            }
+        }
+
+        function audtypes() {
+            clearSubs();
+            var searchSub = document.getElementById("searchSub");
+            var items = ["Conductive", "Sensorineural", "Mixed"];
+
+            for (let i = 0; i < items.length; i += 1) {
+                searchSub.innerHTML += "<option>" + items[i] + "</option>";
+            }
+        }
+
+        function ototypes() {
+            clearSubs();
+            var searchSub = document.getElementById("searchSub");
+            var items = ["Normal", "Not Normal"];
+
+            for (let i = 0; i < items.length; i += 1) {
+                searchSub.innerHTML += "<option>" + items[i] + "</option>";
+            }
+        }
+
+        function tymptypes() {
+            clearSubs();
+            var searchSub = document.getElementById("searchSub");
+            var items = ["Conductive Hearing Loss, Bilateral", "Conductive Hearing Loss, Unilateral Right", "Conductive Hearing Loss, Unilateral Left"];
+
+            for (let i = 0; i < items.length; i += 1) {
+                searchSub.innerHTML += "<option>" + items[i] + "</option>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
