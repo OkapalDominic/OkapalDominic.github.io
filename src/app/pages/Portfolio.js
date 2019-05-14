@@ -123,7 +123,7 @@ export default class Portfolio extends React.Component {
                     </Text>
 
                     <PortfolioGrid>
-                        <PortfolioItem href="examples/capstone/index.html">
+                        <PortfolioItem href="../examples/capstone/index.html">
                             <PortfolioItemThumbnail
                                 src={capstone}
                                 alt="Example of work"
