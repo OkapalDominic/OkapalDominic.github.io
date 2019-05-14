@@ -33324,7 +33324,7 @@ function (_React$Component) {
       return _react.default.createElement(PortfolioWrapper, null, _react.default.createElement(_Container.default, {
         centered_h: true
       }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work.  If you want to see more, drop me an email."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
-        href: "examples/capstone/index.html"
+        href: "./examples/capstone/index.html"
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: _capstone.default,
         alt: "Example of work"
