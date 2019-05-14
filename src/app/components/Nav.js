@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import Button from './Button';
+import Link from './Link';
 
 const Header = styled.header`
   position: fixed;
@@ -66,10 +67,6 @@ const NavItem = styled.li`
     text-decoration: none;
     color: #fff;
     transition: color .25s ease-in-out;
-
-    &:hover {
-      color: #888;
-    }
   }
 `
 
@@ -104,19 +101,19 @@ export default class Nav extends React.Component {
 
                     <NavList>
                         <NavItem>
-                            <a href="/">Home</a>
+                            <Link href="/">Home</Link>
                         </NavItem>
 
                         <NavItem>
-                            <a href="/about">About</a>
+                            <Link href="/about">About</Link>
                         </NavItem>
 
                         <NavItem>
-                            <a href="/portfolio">Portfolio</a>
+                            <Link href="/portfolio">Portfolio</Link>
                         </NavItem>
 
                         <NavItem>
-                            <a href="/contact">Contact</a>
+                            <Link href="/contact">Contact</Link>
                         </NavItem>
                     </NavList>
                 </NavWrapper>

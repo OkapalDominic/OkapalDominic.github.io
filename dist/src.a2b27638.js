@@ -32698,7 +32698,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n        background-image: url(", ");\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center;\n\n        @media (min-width: 480px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 768px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1280px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1600px) {\n            background-image: url(", ");\n        }\n\n        &::before {\n            position: absolute;\n            top: 0;\n            left: 0;\n            z-index: 1;\n            content: '';\n            width: 100%;\n            height: 100%;\n            background-color: ", ";\n        }\n\n    "]);
+  var data = _taggedTemplateLiteral(["\n        background-image: url(", ");\n        background-size: cover;\n        background-repeat: no-repeat;\n        background-position: center;\n        background-attachment: fixed;\n\n        @media (min-width: 480px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 768px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1280px) {\n            background-image: url(", ");\n        }\n\n        @media (min-width: 1600px) {\n            background-image: url(", ");\n        }\n\n        &::before {\n            position: fixed;\n            top: 0;\n            left: 0;\n            z-index: 1;\n            content: '';\n            width: 100%;\n            height: 100%;\n            background-color: ", ";\n        }\n\n    "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -32738,7 +32738,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n        height: 100%;\n    "]);
+  var data = _taggedTemplateLiteral(["\n        min-height: 100%;\n    "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32798,7 +32798,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 0;\n  font-size: 16px;\n\n  @media (min-width: 768px) {\n    font-size: 18px;\n  }\n\n  @media (min-width: 992px) {\n    font-size: 21px;\n  }\n\n  & + & {\n    margin-top: 32px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 0;\n  font-size: 16px;\n\n  background-color: ", ";\n  border-radius: 5px;\n  padding: 5px;\n\n  @media (min-width: 768px) {\n    font-size: 18px;\n  }\n\n  @media (min-width: 992px) {\n    font-size: 21px;\n  }\n\n  & + & {\n    margin-top: 32px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32837,7 +32837,9 @@ var Subheading = _styledComponents.default.h2(_templateObject2());
 
 exports.Subheading = Subheading;
 
-var Text = _styledComponents.default.p(_templateObject3());
+var Text = _styledComponents.default.p(_templateObject3(), function (props) {
+  return props.background_color || "#ffffff00";
+});
 
 exports.Text = Text;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/images/home/1920x1080.jpg":[function(require,module,exports) {
@@ -32950,7 +32952,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    font-weight: bold;\n    text-decoration: none;\n    color: #ffffff;\n    transition: color .25s ease-in-out;\n\n    &:focus,\n    &:hover {\n        color: #006666;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-weight: bold;\n    text-decoration: none;\n    color: #3a3a99;\n    transition: color .25s ease-in-out;\n\n    &:focus,\n    &:hover {\n        color: #006666;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33030,7 +33032,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 50%;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 50%;\n    border: 5px solid #663333;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33060,11 +33062,11 @@ function (_React$Component) {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
-        overlay: "#00000088"
+        overlay: "#00ffff22"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
-        color: "#eeee55"
+        color: "#fff"
       }, _react.default.createElement("div", {
         style: {
           float: 'left'
@@ -33072,7 +33074,11 @@ function (_React$Component) {
       }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me")), _react.default.createElement(ProfileImage, {
         src: _profile.default,
         alt: "profile"
-      }), _react.default.createElement(_Typography.Text, null, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, null, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement(_Link.default, {
+      }), _react.default.createElement(_Typography.Text, {
+        background_color: "#0000002f"
+      }, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, {
+        background_color: "#0000002f"
+      }, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement(_Link.default, {
         href: "mailto:dominic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com")));
     }
@@ -33124,6 +33130,16 @@ var _Link = _interopRequireDefault(require("./../components/Link"));
 var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
+
+var _x = _interopRequireDefault(require("../../images/about/1920x1080.jpg"));
+
+var _x2 = _interopRequireDefault(require("../../images/about/1600x900.jpg"));
+
+var _x3 = _interopRequireDefault(require("../../images/about/1280x800.jpg"));
+
+var _x4 = _interopRequireDefault(require("../../images/about/768x1024.jpg"));
+
+var _x5 = _interopRequireDefault(require("../../images/about/480x800.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33186,8 +33202,14 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement(_Section.default, {
-        centered: true
-      }, _react.default.createElement(_Container.default, null, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(_Typography.Text, null, "I'm available for freelance work.  If you are interested, contact me."), _react.default.createElement(ContactLink, {
+        fullHeight: true,
+        images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
+        overlay: "#8aff8a49"
+      }, _react.default.createElement(_Container.default, {
+        centered_h: true,
+        padding_t: "8%",
+        color: "#fff"
+      }, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(_Typography.Text, null, "I'm available for freelance work.  If you are interested, contact me."), _react.default.createElement(ContactLink, {
         href: "mailto:domiic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com"), _react.default.createElement(_Typography.Text, null, "Follow me on the web:"), _react.default.createElement(SocialMediaList, null, _react.default.createElement("li", null, _react.default.createElement(_Link.default, {
         href: ""
@@ -33201,8 +33223,10 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Contact;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/AwesomeIcon":"src/App/components/AwesomeIcon.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/images/about/examples/capstone.jpg":[function(require,module,exports) {
-module.exports = "/capstone.c3ce5a82.jpg";
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/AwesomeIcon":"src/App/components/AwesomeIcon.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/images/portfolio/examples/capstoneMockup.jpg":[function(require,module,exports) {
+module.exports = "/capstoneMockup.1f1be8cd.jpg";
+},{}],"src/images/portfolio/examples/capstoneRepo.jpg":[function(require,module,exports) {
+module.exports = "/capstoneRepo.8a03c3d9.jpg";
 },{}],"src/App/pages/Portfolio.js":[function(require,module,exports) {
 "use strict";
 
@@ -33223,7 +33247,19 @@ var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
 
-var _capstone = _interopRequireDefault(require("../../images/about/examples/capstone.jpg"));
+var _x = _interopRequireDefault(require("../../images/about/1920x1080.jpg"));
+
+var _x2 = _interopRequireDefault(require("../../images/about/1600x900.jpg"));
+
+var _x3 = _interopRequireDefault(require("../../images/about/1280x800.jpg"));
+
+var _x4 = _interopRequireDefault(require("../../images/about/768x1024.jpg"));
+
+var _x5 = _interopRequireDefault(require("../../images/about/480x800.jpg"));
+
+var _capstoneMockup = _interopRequireDefault(require("../../images/portfolio/examples/capstoneMockup.jpg"));
+
+var _capstoneRepo = _interopRequireDefault(require("../../images/portfolio/examples/capstoneRepo.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33256,7 +33292,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    opacity: 0;\n    transition: opacity .25s ease-in-out;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: black;\n    background-color: #ffffff99;\n    border: 1px solid #ffffff00;\n    border-radius: 10px;\n    text-align: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n    opacity: 0;\n    transition: opacity .25s ease-in-out;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: black;\n    background-color: #ffffff99;\n    border: 1px solid #ffffff00;\n    border-radius: 10px;\n    width: 98%;\n    padding: 3px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -33321,20 +33357,24 @@ function (_React$Component) {
   _createClass(Portfolio, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(PortfolioWrapper, null, _react.default.createElement(_Container.default, {
+      return _react.default.createElement(PortfolioWrapper, {
+        fullHeight: true,
+        images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
+        overlay: "#ffff0022"
+      }, _react.default.createElement(_Container.default, {
         centered_h: true
       }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work.  If you want to see more, drop me an email."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
         href: "../examples/capstone/index.html"
       }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: _capstone.default,
-        alt: "Example of work"
+        src: _capstoneMockup.default,
+        alt: "Mockup for capstone project"
       }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a mockup I made for my capstone project.  A webapp written with Angular for the VA.")), _react.default.createElement(PortfolioItem, {
-        href: ""
+        href: "https://github.com/movshov/VA-Audiology-App",
+        target: "_blank"
       }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/-aDl1z8_nGY/600x600",
-        srcSet: "https://source.unsplash.com/-aDl1z8_nGY/600x600 1x, https://source.unsplash.com/-aDl1z8_nGY/1200x1200 2x",
-        alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
+        src: _capstoneRepo.default,
+        alt: "Repository for capstone project"
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is the repository where my actual capstone project is being hosted.", _react.default.createElement("br", null), "Search ", _react.default.createElement("strong", null, "author:OkapalDominic"), " in this repository to see my branches.")), _react.default.createElement(PortfolioItem, {
         href: ""
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: "https://source.unsplash.com/qvEwMfUX_DM/600x600",
@@ -33386,7 +33426,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Portfolio;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/examples/capstone.jpg":"src/images/about/examples/capstone.jpg"}],"src/App/components/Nav.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../images/portfolio/examples/capstoneMockup.jpg":"src/images/portfolio/examples/capstoneMockup.jpg","../../images/portfolio/examples/capstoneRepo.jpg":"src/images/portfolio/examples/capstoneRepo.jpg"}],"src/App/components/Nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33399,6 +33439,8 @@ var _react = _interopRequireDefault(require("react"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _Button = _interopRequireDefault(require("./Button"));
+
+var _Link = _interopRequireDefault(require("./Link"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -33433,7 +33475,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  & + & {\n    margin-top: 12px;\n  }\n\n  @media (min-width: 480px) {\n    & + & {\n      margin-top: 0;\n      margin-left: 32px;\n    }\n  }\n\n  a {\n    font-size: 16px;\n    font-weight: bold;\n    text-decoration: none;\n    color: #fff;\n    transition: color .25s ease-in-out;\n\n    &:hover {\n      color: #888;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  & + & {\n    margin-top: 12px;\n  }\n\n  @media (min-width: 480px) {\n    & + & {\n      margin-top: 0;\n      margin-left: 32px;\n    }\n  }\n\n  a {\n    font-size: 16px;\n    font-weight: bold;\n    text-decoration: none;\n    color: #fff;\n    transition: color .25s ease-in-out;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -33528,13 +33570,13 @@ function (_React$Component) {
         isOpen: this.state.show
       }, _react.default.createElement(NavButton, {
         onClick: this.toggleMenu
-      }, "Menu"), _react.default.createElement(NavList, null, _react.default.createElement(NavItem, null, _react.default.createElement("a", {
+      }, "Menu"), _react.default.createElement(NavList, null, _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/"
-      }, "Home")), _react.default.createElement(NavItem, null, _react.default.createElement("a", {
+      }, "Home")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/about"
-      }, "About")), _react.default.createElement(NavItem, null, _react.default.createElement("a", {
+      }, "About")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/portfolio"
-      }, "Portfolio")), _react.default.createElement(NavItem, null, _react.default.createElement("a", {
+      }, "Portfolio")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/contact"
       }, "Contact")))));
     }
@@ -33544,7 +33586,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Nav;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./Button":"src/App/components/Button.js"}],"src/App/Main.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./Button":"src/App/components/Button.js","./Link":"src/App/components/Link.js"}],"src/App/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33686,7 +33728,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59503" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50820" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

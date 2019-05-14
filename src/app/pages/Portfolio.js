@@ -7,9 +7,15 @@ import Section from './../components/Section';
 import { Heading, Subheading, Text } from './../components/Typography';
 
 // Import images
+import img1920x1080 from '../../images/about/1920x1080.jpg';
+import img1600x900 from '../../images/about/1600x900.jpg';
+import img1280x800 from '../../images/about/1280x800.jpg';
+import img768x1024 from '../../images/about/768x1024.jpg';
+import img480x800 from '../../images/about/480x800.jpg';
 
 // Import example thumbnails
-import capstone from '../../images/about/examples/capstone.jpg';
+import capstoneMockup from '../../images/portfolio/examples/capstoneMockup.jpg';
+import capstoneRepo from '../../images/portfolio/examples/capstoneRepo.jpg';
 
 const PortfolioWrapper = styled(Section)`
     padding-top: 120px;
@@ -40,7 +46,8 @@ const PortfolioItemThumbnailText = styled(Text)`
     background-color: #ffffff99;
     border: 1px solid #ffffff00;
     border-radius: 10px;
-    text-align: center;
+    width: 98%;
+    padding: 3px;
 `
 
 const PortfolioItem = styled.a`
@@ -112,7 +119,7 @@ const PortfolioItem = styled.a`
 export default class Portfolio extends React.Component {
     render() {
         return (
-            <PortfolioWrapper>
+            <PortfolioWrapper fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="#ffff0022">
                 <Container centered_h>
                     <Subheading>Dominic Okapal</Subheading>
 
@@ -125,15 +132,22 @@ export default class Portfolio extends React.Component {
                     <PortfolioGrid>
                         <PortfolioItem href="../examples/capstone/index.html">
                             <PortfolioItemThumbnail
-                                src={capstone}
-                                alt="Example of work"
+                                src={capstoneMockup}
+                                alt="Mockup for capstone project"
                             />
                             <PortfolioItemThumbnailText>
                                 This is a mockup I made for my capstone project.  A webapp written with Angular for the VA.
                             </PortfolioItemThumbnailText>
                         </PortfolioItem>
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/-aDl1z8_nGY/600x600" srcSet="https://source.unsplash.com/-aDl1z8_nGY/600x600 1x, https://source.unsplash.com/-aDl1z8_nGY/1200x1200 2x" alt="Example of work" />
+                        <PortfolioItem href="https://github.com/movshov/VA-Audiology-App" target="_blank">
+                            <PortfolioItemThumbnail 
+                            src={capstoneRepo}
+                            alt="Repository for capstone project"
+                            />
+                            <PortfolioItemThumbnailText>
+                                This is the repository where my actual capstone project is being hosted.<br/>
+                                Search <strong>author:OkapalDominic</strong> in this repository to see my branches.
+                            </PortfolioItemThumbnailText>
                         </PortfolioItem>
 
                         <PortfolioItem href="">

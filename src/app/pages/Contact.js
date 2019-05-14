@@ -7,6 +7,13 @@ import Link from './../components/Link';
 import Section from './../components/Section';
 import { Heading, Text } from './../components/Typography';
 
+// Import images
+import img1920x1080 from '../../images/about/1920x1080.jpg';
+import img1600x900 from '../../images/about/1600x900.jpg';
+import img1280x800 from '../../images/about/1280x800.jpg';
+import img768x1024 from '../../images/about/768x1024.jpg';
+import img480x800 from '../../images/about/480x800.jpg';
+
 const ContactLink = styled(Link)`
     margin-bottom: 32px;
     display: inline-block;
@@ -42,8 +49,8 @@ const SocialMediaList = styled.ul`
 export default class Contact extends React.Component {
     render() {
         return (
-            <Section centered>
-                <Container>
+            <Section fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="#8aff8a49">
+                <Container centered_h padding_t="8%" color="#fff">
                     <Heading>Say hello</Heading>
 
                     <Text>I'm available for freelance work.  If you are interested, contact me.</Text>

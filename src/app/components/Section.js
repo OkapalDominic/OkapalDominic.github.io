@@ -4,7 +4,7 @@ import Container from './Container';
 
 const Section = styled.section`
     ${props => props.fullHeight && css`
-        height: 100%;
+        min-height: 100%;
     `}
     
     ${props => (props.centered_h || props.centered_v || props.centered_hv) && css`
@@ -30,6 +30,7 @@ const Section = styled.section`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        background-attachment: fixed;
 
         @media (min-width: 480px) {
             background-image: url(${props => props.images[3]});
@@ -48,7 +49,7 @@ const Section = styled.section`
         }
 
         &::before {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             z-index: 1;

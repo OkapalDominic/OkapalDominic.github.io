@@ -46,6 +46,10 @@ export const Text = styled.p`
   margin-top: 0;
   font-size: 16px;
 
+  background-color: ${props => (props.background_color || "#ffffff00")};
+  border-radius: 5px;
+  padding: 5px;
+
   @media (min-width: 768px) {
     font-size: 18px;
   }
