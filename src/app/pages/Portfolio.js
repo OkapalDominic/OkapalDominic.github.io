@@ -16,6 +16,7 @@ import img480x800 from '../../images/about/480x800.jpg';
 // Import example thumbnails
 import capstoneMockup from '../../images/portfolio/examples/capstoneMockup.jpg';
 import capstoneRepo from '../../images/portfolio/examples/capstoneRepo.jpg';
+import animal_analysis from '../../images/portfolio/examples/animal_analysis.jpg'
 
 const PortfolioWrapper = styled(Section)`
     padding-top: 120px;
@@ -126,7 +127,7 @@ export default class Portfolio extends React.Component {
                     <Heading>My work</Heading>
 
                     <Text>
-                        Selected examples of my work.  If you want to see more, drop me an email.
+                        Selected examples of my work.
                     </Text>
 
                     <PortfolioGrid>
@@ -150,38 +151,16 @@ export default class Portfolio extends React.Component {
                             </PortfolioItemThumbnailText>
                         </PortfolioItem>
 
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/qvEwMfUX_DM/600x600" srcSet="https://source.unsplash.com/qvEwMfUX_DM/600x600 1x, https://source.unsplash.com/qvEwMfUX_DM/1200x1200 2x" alt="Example of work" />
-                        </PortfolioItem>
-
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/9QjbejABFn8/600x600" srcSet="https://source.unsplash.com/9QjbejABFn8/600x600 1x, https://source.unsplash.com/9QjbejABFn8/1200x1200 2x" alt="Example of work" />
-                        </PortfolioItem>
-
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/cDD83wV627U/600x600" srcSet="https://source.unsplash.com/cDD83wV627U/600x600 1x, https://source.unsplash.com/cDD83wV627U/1200x1200 2x" alt="Example of work" />
-                        </PortfolioItem>
-
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/KDYcgCEoFcY/600x600" srcSet="https://source.unsplash.com/KDYcgCEoFcY/600x600 1x, https://source.unsplash.com/KDYcgCEoFcY/1200x1200 2x" alt="Example of work" />
-                        </PortfolioItem>
-
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/oKfCxcKnCo8/600x600" srcSet="https://source.unsplash.com/oKfCxcKnCo8/600x600 1x, https://source.unsplash.com/oKfCxcKnCo8/1200x1200 2x" alt="Example of work" />
-                        </PortfolioItem>
-
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/dClHqW-EfS8/600x600" srcSet="https://source.unsplash.com/dClHqW-EfS8/600x600 1x, https://source.unsplash.com/dClHqW-EfS8/1200x1200 2x" alt="Example of work" />
-                        </PortfolioItem>
-
-                        <PortfolioItem href="">
-                            <PortfolioItemThumbnail src="https://source.unsplash.com/74elF-XSsPg/600x600" srcSet="https://source.unsplash.com/74elF-XSsPg/600x600 1x, https://source.unsplash.com/74elF-XSsPg/1200x1200 2x" alt="Example of work" />
+                        <PortfolioItem href="https://github.com/OkapalDominic/animal_analysis" target="_blank">
+                            <PortfolioItemThumbnail
+                            src={animal_analysis}
+                            alt="Animal Analysis" />
+                            <PortfolioItemThumbnailText>
+                                This is a project I made using Flask, it was originally deployed to google cloud.  Upload an image
+                                and write what something about an animal.  It then looks up information on that animal.  There are instructions if you want to try it out.
+                            </PortfolioItemThumbnailText>
                         </PortfolioItem>
                     </PortfolioGrid>
-
-                    <Text>Let's get in touch:</Text>
-
-                    <Link href="mailto:dominic.okapal@gmail.com">dominic.okapal@gmail.com</Link>
                 </Container>
             </PortfolioWrapper>
         )

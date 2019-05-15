@@ -33078,9 +33078,7 @@ function (_React$Component) {
         background_color: "#0000002f"
       }, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, {
         background_color: "#0000002f"
-      }, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer."), _react.default.createElement(_Link.default, {
-        href: "mailto:dominic.okapal@gmail.com"
-      }, "dominic.okapal@gmail.com")));
+      }, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer.")));
     }
   }]);
 
@@ -33212,7 +33210,8 @@ function (_React$Component) {
       }, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(_Typography.Text, null, "I'm available for freelance work.  If you are interested, contact me."), _react.default.createElement(ContactLink, {
         href: "mailto:domiic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com"), _react.default.createElement(_Typography.Text, null, "Follow me on the web:"), _react.default.createElement(SocialMediaList, null, _react.default.createElement("li", null, _react.default.createElement(_Link.default, {
-        href: ""
+        href: "https://github.com/OkapalDominic",
+        target: "_blank"
       }, _react.default.createElement(_AwesomeIcon.default, {
         icon: "github"
       }))))));
@@ -33227,6 +33226,8 @@ exports.default = Contact;
 module.exports = "/capstoneMockup.1f1be8cd.jpg";
 },{}],"src/images/portfolio/examples/capstoneRepo.jpg":[function(require,module,exports) {
 module.exports = "/capstoneRepo.8a03c3d9.jpg";
+},{}],"src/images/portfolio/examples/animal_analysis.jpg":[function(require,module,exports) {
+module.exports = "/animal_analysis.53720368.jpg";
 },{}],"src/App/pages/Portfolio.js":[function(require,module,exports) {
 "use strict";
 
@@ -33260,6 +33261,8 @@ var _x5 = _interopRequireDefault(require("../../images/about/480x800.jpg"));
 var _capstoneMockup = _interopRequireDefault(require("../../images/portfolio/examples/capstoneMockup.jpg"));
 
 var _capstoneRepo = _interopRequireDefault(require("../../images/portfolio/examples/capstoneRepo.jpg"));
+
+var _animal_analysis = _interopRequireDefault(require("../../images/portfolio/examples/animal_analysis.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33363,7 +33366,7 @@ function (_React$Component) {
         overlay: "#ffff0022"
       }, _react.default.createElement(_Container.default, {
         centered_h: true
-      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work.  If you want to see more, drop me an email."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
+      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
         href: "../examples/capstone/index.html"
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: _capstoneMockup.default,
@@ -33375,50 +33378,12 @@ function (_React$Component) {
         src: _capstoneRepo.default,
         alt: "Repository for capstone project"
       }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is the repository where my actual capstone project is being hosted.", _react.default.createElement("br", null), "Search ", _react.default.createElement("strong", null, "author:OkapalDominic"), " in this repository to see my branches.")), _react.default.createElement(PortfolioItem, {
-        href: ""
+        href: "https://github.com/OkapalDominic/animal_analysis",
+        target: "_blank"
       }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/qvEwMfUX_DM/600x600",
-        srcSet: "https://source.unsplash.com/qvEwMfUX_DM/600x600 1x, https://source.unsplash.com/qvEwMfUX_DM/1200x1200 2x",
-        alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
-        href: ""
-      }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/9QjbejABFn8/600x600",
-        srcSet: "https://source.unsplash.com/9QjbejABFn8/600x600 1x, https://source.unsplash.com/9QjbejABFn8/1200x1200 2x",
-        alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
-        href: ""
-      }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/cDD83wV627U/600x600",
-        srcSet: "https://source.unsplash.com/cDD83wV627U/600x600 1x, https://source.unsplash.com/cDD83wV627U/1200x1200 2x",
-        alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
-        href: ""
-      }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/KDYcgCEoFcY/600x600",
-        srcSet: "https://source.unsplash.com/KDYcgCEoFcY/600x600 1x, https://source.unsplash.com/KDYcgCEoFcY/1200x1200 2x",
-        alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
-        href: ""
-      }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/oKfCxcKnCo8/600x600",
-        srcSet: "https://source.unsplash.com/oKfCxcKnCo8/600x600 1x, https://source.unsplash.com/oKfCxcKnCo8/1200x1200 2x",
-        alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
-        href: ""
-      }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/dClHqW-EfS8/600x600",
-        srcSet: "https://source.unsplash.com/dClHqW-EfS8/600x600 1x, https://source.unsplash.com/dClHqW-EfS8/1200x1200 2x",
-        alt: "Example of work"
-      })), _react.default.createElement(PortfolioItem, {
-        href: ""
-      }, _react.default.createElement(PortfolioItemThumbnail, {
-        src: "https://source.unsplash.com/74elF-XSsPg/600x600",
-        srcSet: "https://source.unsplash.com/74elF-XSsPg/600x600 1x, https://source.unsplash.com/74elF-XSsPg/1200x1200 2x",
-        alt: "Example of work"
-      }))), _react.default.createElement(_Typography.Text, null, "Let's get in touch:"), _react.default.createElement(_Link.default, {
-        href: "mailto:dominic.okapal@gmail.com"
-      }, "dominic.okapal@gmail.com")));
+        src: _animal_analysis.default,
+        alt: "Animal Analysis"
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a project I made using Flask, it was originally deployed to google cloud.  Upload an image and write what something about an animal.  It then looks up information on that animal.  There are instructions if you want to try it out.")))));
     }
   }]);
 
@@ -33426,7 +33391,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Portfolio;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../images/portfolio/examples/capstoneMockup.jpg":"src/images/portfolio/examples/capstoneMockup.jpg","../../images/portfolio/examples/capstoneRepo.jpg":"src/images/portfolio/examples/capstoneRepo.jpg"}],"src/App/components/Nav.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../images/portfolio/examples/capstoneMockup.jpg":"src/images/portfolio/examples/capstoneMockup.jpg","../../images/portfolio/examples/capstoneRepo.jpg":"src/images/portfolio/examples/capstoneRepo.jpg","../../images/portfolio/examples/animal_analysis.jpg":"src/images/portfolio/examples/animal_analysis.jpg"}],"src/App/components/Nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33728,7 +33693,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50820" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56249" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -40,8 +40,6 @@ export default class About extends React.Component {
                     <Text background_color="#0000002f">
                         I am now married to an amazing woman with four amazing children and am looking for work as a web developer.
                     </Text>
-
-                    <Link href="mailto:dominic.okapal@gmail.com">dominic.okapal@gmail.com</Link>
                 </Container>
             </Section>
         )

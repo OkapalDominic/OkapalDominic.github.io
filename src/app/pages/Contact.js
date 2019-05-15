@@ -61,7 +61,7 @@ export default class Contact extends React.Component {
 
                     <SocialMediaList>
                         <li>
-                            <Link href="">
+                            <Link href="https://github.com/OkapalDominic" target="_blank">
                                 <AwesomeIcon icon="github" />
                             </Link>
                         </li>
