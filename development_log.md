@@ -31,7 +31,8 @@ Doing this I learned something new, GitHub pages normally allows you to choose w
 ## Part 2: Adding Content
 
 ---
-As I chagned things I wanted to include my own images.  I knew that using a url worked, as that was what the tutorial did, but when I first tried to point to image files in my project, it didn't work.  As I learned, I needed to import the images into my project, and I could then pass them around to be used.
+As I changed things I wanted to include my own images.  I knew that using a url worked, as that was what the tutorial did, but when I first tried to point to image files in my project, it didn't work.  As I learned, I needed to import the images into my project, and I could then pass them around to be used.
+My first example I included was a mockup site, I realized that I couldn't just copy it into my project structure so I needed to decide how I was going to figure this out.  Instead of trying to host it somewhere else and linking to it, I decided to put it in an examples folder in my dist folder.  This way it would be included when deployed and it made sense to add links back to the portfolio from this site, as it is not it's own thing, just an example within my portfolio.
 
 [tutorial1]: https://blog.alexdevero.com/build-website-react-pt1/
 [injectGlobal]: https://www.styled-components.com/docs/api#deprecated-injectglobal

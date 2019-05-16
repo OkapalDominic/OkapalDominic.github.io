@@ -33066,7 +33066,7 @@ function (_React$Component) {
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
-        color: "#fff"
+        color: "#000"
       }, _react.default.createElement("div", {
         style: {
           float: 'left'
@@ -33075,9 +33075,9 @@ function (_React$Component) {
         src: _profile.default,
         alt: "profile"
       }), _react.default.createElement(_Typography.Text, {
-        background_color: "#0000002f"
+        background_color: "#ffffff2f"
       }, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, {
-        background_color: "#0000002f"
+        background_color: "#ffffff2f"
       }, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer.")));
     }
   }]);
@@ -33206,7 +33206,7 @@ function (_React$Component) {
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
-        color: "#fff"
+        color: "#000"
       }, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(_Typography.Text, null, "I'm available for freelance work.  If you are interested, contact me."), _react.default.createElement(ContactLink, {
         href: "mailto:domiic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com"), _react.default.createElement(_Typography.Text, null, "Follow me on the web:"), _react.default.createElement(SocialMediaList, null, _react.default.createElement("li", null, _react.default.createElement(_Link.default, {
@@ -33214,6 +33214,11 @@ function (_React$Component) {
         target: "_blank"
       }, _react.default.createElement(_AwesomeIcon.default, {
         icon: "github"
+      }))), _react.default.createElement("li", null, _react.default.createElement(_Link.default, {
+        href: "www.linkedin.com/in/dominic-okapal",
+        target: "_blank"
+      }, _react.default.createElement(_AwesomeIcon.default, {
+        icon: "linkedin"
       }))))));
     }
   }]);
@@ -33693,7 +33698,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56249" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58083" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

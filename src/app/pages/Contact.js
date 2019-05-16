@@ -50,7 +50,7 @@ export default class Contact extends React.Component {
     render() {
         return (
             <Section fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="#8aff8a49">
-                <Container centered_h padding_t="8%" color="#fff">
+                <Container centered_h padding_t="8%" color="#000">
                     <Heading>Say hello</Heading>
 
                     <Text>I'm available for freelance work.  If you are interested, contact me.</Text>
@@ -63,6 +63,11 @@ export default class Contact extends React.Component {
                         <li>
                             <Link href="https://github.com/OkapalDominic" target="_blank">
                                 <AwesomeIcon icon="github" />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="www.linkedin.com/in/dominic-okapal" target="_blank">
+                                <AwesomeIcon icon="linkedin" />
                             </Link>
                         </li>
                     </SocialMediaList>
