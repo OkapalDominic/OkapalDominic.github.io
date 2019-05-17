@@ -16,7 +16,8 @@ import img480x800 from '../../images/about/480x800.jpg';
 // Import example thumbnails
 import capstoneMockup from '../../images/portfolio/examples/capstoneMockup.jpg';
 import capstoneRepo from '../../images/portfolio/examples/capstoneRepo.jpg';
-import animal_analysis from '../../images/portfolio/examples/animal_analysis.jpg'
+import animal_analysis from '../../images/portfolio/examples/animal_analysis.jpg';
+import game from '../../images/portfolio/examples/game.jpg';
 
 const PortfolioWrapper = styled(Section)`
     padding-top: 120px;
@@ -140,6 +141,7 @@ export default class Portfolio extends React.Component {
                                 This is a mockup I made for my capstone project.  A webapp written with Angular for the VA.
                             </PortfolioItemThumbnailText>
                         </PortfolioItem>
+
                         <PortfolioItem href="https://github.com/movshov/VA-Audiology-App" target="_blank">
                             <PortfolioItemThumbnail 
                             src={capstoneRepo}
@@ -156,8 +158,17 @@ export default class Portfolio extends React.Component {
                             src={animal_analysis}
                             alt="Animal Analysis" />
                             <PortfolioItemThumbnailText>
-                                This is a project I made using Flask, it was originally deployed to google cloud.  Upload an image
-                                and write what something about an animal.  It then looks up information on that animal.  There are instructions if you want to try it out.
+                                This repo contains a project made using Flask, originally deployed to google cloud.  Upload an image of an animal
+                                and write about it.  It then looks up information on that animal.  There are instructions if you want to try it out.
+                            </PortfolioItemThumbnailText>
+                        </PortfolioItem>
+
+                        <PortfolioItem href="/examples/game">
+                            <PortfolioItemThumbnail
+                            src={game}
+                            alt="Drag game" />
+                            <PortfolioItemThumbnailText>
+                                This is a simple game made using react.  See if you can reach the exit!
                             </PortfolioItemThumbnailText>
                         </PortfolioItem>
                     </PortfolioGrid>

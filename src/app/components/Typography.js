@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Heading = styled.h1`
   margin-top: 0;
@@ -49,6 +49,10 @@ export const Text = styled.p`
   background-color: ${props => (props.background_color || "#ffffff00")};
   border-radius: 5px;
   padding: 5px;
+
+  ${props => props.centered && css`
+    text-align: center;
+  `}
 
   @media (min-width: 768px) {
     font-size: 18px;

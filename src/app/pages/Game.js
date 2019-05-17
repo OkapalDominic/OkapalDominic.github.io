@@ -19,10 +19,15 @@ import img480x800 from '../../images/about/480x800.jpg';
 const wallColor = '#662412';
 //
 
-export const Wall = styled.div`
+export const Wall = styled.div.attrs(
+    props => ({
+        style: {
+            top: (props.top + 'px'),
+            left: (props.left + 'px')
+        }
+    })
+)`
     position: absolute;
-    top: ${props => props.top + 'px'};
-    left: ${props => props.left + 'px'};
     width: ${props => props.width + 'px'};
     height: ${props => props.height + 'px'};
     background-color: ${props => props.color};
@@ -219,7 +224,9 @@ export default class Game extends React.Component {
                 clickPos: { x: 10, y: 10 },
                 dragging: false,
                 size: { width: 15, height: 30 },
-                opacity: 1
+                opacity: 1,
+                wins: 0,
+                losses: 0
             },
             exit: {
                 x: 15,
@@ -229,9 +236,7 @@ export default class Game extends React.Component {
             },
             modal: {
                 show: false
-            },
-            wins: 0,
-            losses: 0
+            }
         };
         createWalls(this, wallColor);
         this.handleMouseMove = this.handleMouseMove.bind(this);
@@ -240,26 +245,49 @@ export default class Game extends React.Component {
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleCloseModal = this.handleCloseModal.bind(this);
 
-        var speed = [1,1,1,2];
+        this.moveWalls();
+        this.checkCollisions();
+    }
+
+    moveWalls() {
+        var speed = [1, 1, 1, 2];
         setInterval(() => {
             let tmp = Object.assign({}, this.state);
             tmp.walls[6].top += speed[0];
             tmp.walls[9].left += speed[1];
             tmp.walls[10].left += speed[2];
             tmp.walls[12].left += speed[3];
-            if(tmp.walls[6].top < 0 || tmp.walls[6].top > 180) {
+            if (tmp.walls[6].top < 0 || tmp.walls[6].top > 180) {
                 speed[0] *= -1;
             }
-            if(tmp.walls[9].left < 340 || tmp.walls[9].left > 400) {
+            if (tmp.walls[9].left < 340 || tmp.walls[9].left > 400) {
                 speed[1] *= -1;
             }
-            if(tmp.walls[10].left < 340 || tmp.walls[10].left > 400) {
+            if (tmp.walls[10].left < 340 || tmp.walls[10].left > 400) {
                 speed[2] *= -1;
             }
-            if(tmp.walls[12].left < 300 || tmp.walls[12].left > 400) {
+            if (tmp.walls[12].left < 300 || tmp.walls[12].left > 400) {
                 speed[3] *= -1;
             }
             this.setState({ tmp });
+        }, 10);
+    }
+
+    checkCollisions() {
+        setInterval(() => {
+            let p = { x: this.state.player.position.x, y: this.state.player.position.y, width: this.state.player.size.width, height: this.state.player.size.height };
+
+            if (playerHitWall(this.state.walls, p)) {
+                let tmp = Object.assign({}, this.state);
+                tmp.player.position = tmp.player.startPos;
+                tmp.player.dragging = false;
+                tmp.player.losses += 1;
+                this.setState({ tmp });
+                console.log(this.state.player.losses);
+            }
+            if (playerHitExit(this.state.exit, p)) {
+                this.handleOpenModal();
+            }
         }, 10);
     }
 
@@ -275,18 +303,6 @@ export default class Game extends React.Component {
                 y: e.pageY - this.state.player.clickPos.y
             };
             this.setState({ tmp });
-            let p = { x: this.state.player.position.x, y: this.state.player.position.y, width: this.state.player.size.width, height: this.state.player.size.height };
-
-            if (playerHitWall(this.state.walls, p)) {
-                tmp = Object.assign({}, this.state);
-                tmp.player.position = tmp.player.startPos;
-                tmp.player.dragging = false;
-                tmp.losses += 1;
-                this.setState({ tmp });
-            }
-            if (playerHitExit(this.state.exit, p)) {
-                this.handleOpenModal();
-            }
         }
     }
 
@@ -312,7 +328,7 @@ export default class Game extends React.Component {
         tmp.player.opacity = 0;
         tmp.player.position = tmp.player.startPos;
         tmp.player.dragging = false;
-        tmp.wins += 1;
+        tmp.player.wins += 1;
         this.setState({ tmp });
     }
 
@@ -329,14 +345,14 @@ export default class Game extends React.Component {
     }
 
     render() {
-        const winLoss = `Wins: ${this.state.wins}  ---   Losses: ${this.state.losses}`;
         return (
             <Section fullHeight centered_hv images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="#ffff0022">
                 <Heading>
                     Simple drag game.
                 </Heading>
-                <Text>
-                    Drag the piece in the top left to the exit in the bottom left.  If you touch a wall you'll have to start over.
+                <Text centered>
+                    Drag the piece in the top left to the exit in the bottom left.  If you touch a wall you'll have to start over.<br />
+                    Wins: {this.state.player.wins}  ---   Losses: {this.state.player.losses}
                 </Text>
                 <Board
                     id="board"

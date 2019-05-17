@@ -32793,12 +32793,22 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Text = exports.Subheading = exports.Heading = void 0;
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    text-align: center;\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 0;\n  font-size: 16px;\n\n  background-color: ", ";\n  border-radius: 5px;\n  padding: 5px;\n\n  @media (min-width: 768px) {\n    font-size: 18px;\n  }\n\n  @media (min-width: 992px) {\n    font-size: 21px;\n  }\n\n  & + & {\n    margin-top: 32px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 0;\n  font-size: 16px;\n\n  background-color: ", ";\n  border-radius: 5px;\n  padding: 5px;\n\n  ", "\n\n  @media (min-width: 768px) {\n    font-size: 18px;\n  }\n\n  @media (min-width: 992px) {\n    font-size: 21px;\n  }\n\n  & + & {\n    margin-top: 32px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32839,6 +32849,8 @@ exports.Subheading = Subheading;
 
 var Text = _styledComponents.default.p(_templateObject3(), function (props) {
   return props.background_color || "#ffffff00";
+}, function (props) {
+  return props.centered && (0, _styledComponents.css)(_templateObject4());
 });
 
 exports.Text = Text;
@@ -33233,6 +33245,8 @@ module.exports = "/capstoneMockup.1f1be8cd.jpg";
 module.exports = "/capstoneRepo.8a03c3d9.jpg";
 },{}],"src/images/portfolio/examples/animal_analysis.jpg":[function(require,module,exports) {
 module.exports = "/animal_analysis.53720368.jpg";
+},{}],"src/images/portfolio/examples/game.jpg":[function(require,module,exports) {
+module.exports = "/game.60b6ef7b.jpg";
 },{}],"src/App/pages/Portfolio.js":[function(require,module,exports) {
 "use strict";
 
@@ -33268,6 +33282,8 @@ var _capstoneMockup = _interopRequireDefault(require("../../images/portfolio/exa
 var _capstoneRepo = _interopRequireDefault(require("../../images/portfolio/examples/capstoneRepo.jpg"));
 
 var _animal_analysis = _interopRequireDefault(require("../../images/portfolio/examples/animal_analysis.jpg"));
+
+var _game = _interopRequireDefault(require("../../images/portfolio/examples/game.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33388,7 +33404,12 @@ function (_React$Component) {
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: _animal_analysis.default,
         alt: "Animal Analysis"
-      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a project I made using Flask, it was originally deployed to google cloud.  Upload an image and write what something about an animal.  It then looks up information on that animal.  There are instructions if you want to try it out.")))));
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This repo contains a project made using Flask, originally deployed to google cloud.  Upload an image of an animal and write about it.  It then looks up information on that animal.  There are instructions if you want to try it out.")), _react.default.createElement(PortfolioItem, {
+        href: "/examples/game"
+      }, _react.default.createElement(PortfolioItemThumbnail, {
+        src: _game.default,
+        alt: "Drag game"
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a simple game made using react.  See if you can reach the exit!")))));
     }
   }]);
 
@@ -33396,7 +33417,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Portfolio;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../images/portfolio/examples/capstoneMockup.jpg":"src/images/portfolio/examples/capstoneMockup.jpg","../../images/portfolio/examples/capstoneRepo.jpg":"src/images/portfolio/examples/capstoneRepo.jpg","../../images/portfolio/examples/animal_analysis.jpg":"src/images/portfolio/examples/animal_analysis.jpg"}],"node_modules/react-modal/lib/helpers/tabbable.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../images/portfolio/examples/capstoneMockup.jpg":"src/images/portfolio/examples/capstoneMockup.jpg","../../images/portfolio/examples/capstoneRepo.jpg":"src/images/portfolio/examples/capstoneRepo.jpg","../../images/portfolio/examples/animal_analysis.jpg":"src/images/portfolio/examples/animal_analysis.jpg","../../images/portfolio/examples/game.jpg":"src/images/portfolio/examples/game.jpg"}],"node_modules/react-modal/lib/helpers/tabbable.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34918,7 +34939,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: ", ";\n    left: ", ";\n    width: ", ";\n    height: ", ";\n    background-color: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    width: ", ";\n    height: ", ";\n    background-color: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -34932,11 +34953,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 // Wall color
 var wallColor = '#662412'; //
 
-var Wall = _styledComponents.default.div(_templateObject(), function (props) {
-  return props.top + 'px';
-}, function (props) {
-  return props.left + 'px';
-}, function (props) {
+var Wall = _styledComponents.default.div.attrs(function (props) {
+  return {
+    style: {
+      top: props.top + 'px',
+      left: props.left + 'px'
+    }
+  };
+})(_templateObject(), function (props) {
   return props.width + 'px';
 }, function (props) {
   return props.height + 'px';
@@ -35182,7 +35206,9 @@ function (_React$Component2) {
           width: 15,
           height: 30
         },
-        opacity: 1
+        opacity: 1,
+        wins: 0,
+        losses: 0
       },
       exit: {
         x: 15,
@@ -35192,9 +35218,7 @@ function (_React$Component2) {
       },
       modal: {
         show: false
-      },
-      wins: 0,
-      losses: 0
+      }
     };
     createWalls(_assertThisInitialized(_this), wallColor);
     _this.handleMouseMove = _this.handleMouseMove.bind(_assertThisInitialized(_this));
@@ -35202,38 +35226,80 @@ function (_React$Component2) {
     _this.handleMouseUp = _this.handleMouseUp.bind(_assertThisInitialized(_this));
     _this.handleOpenModal = _this.handleOpenModal.bind(_assertThisInitialized(_this));
     _this.handleCloseModal = _this.handleCloseModal.bind(_assertThisInitialized(_this));
-    var speed = [1, 1, 1, 2];
-    setInterval(function () {
-      var tmp = Object.assign({}, _this.state);
-      tmp.walls[6].top += speed[0];
-      tmp.walls[9].left += speed[1];
-      tmp.walls[10].left += speed[2];
-      tmp.walls[12].left += speed[3];
 
-      if (tmp.walls[6].top < 0 || tmp.walls[6].top > 180) {
-        speed[0] *= -1;
-      }
+    _this.moveWalls();
 
-      if (tmp.walls[9].left < 340 || tmp.walls[9].left > 400) {
-        speed[1] *= -1;
-      }
+    _this.checkCollisions();
 
-      if (tmp.walls[10].left < 340 || tmp.walls[10].left > 400) {
-        speed[2] *= -1;
-      }
-
-      if (tmp.walls[12].left < 300 || tmp.walls[12].left > 400) {
-        speed[3] *= -1;
-      }
-
-      _this.setState({
-        tmp: tmp
-      });
-    }, 10);
     return _this;
   }
 
   _createClass(Game, [{
+    key: "moveWalls",
+    value: function moveWalls() {
+      var _this2 = this;
+
+      var speed = [1, 1, 1, 2];
+      setInterval(function () {
+        var tmp = Object.assign({}, _this2.state);
+        tmp.walls[6].top += speed[0];
+        tmp.walls[9].left += speed[1];
+        tmp.walls[10].left += speed[2];
+        tmp.walls[12].left += speed[3];
+
+        if (tmp.walls[6].top < 0 || tmp.walls[6].top > 180) {
+          speed[0] *= -1;
+        }
+
+        if (tmp.walls[9].left < 340 || tmp.walls[9].left > 400) {
+          speed[1] *= -1;
+        }
+
+        if (tmp.walls[10].left < 340 || tmp.walls[10].left > 400) {
+          speed[2] *= -1;
+        }
+
+        if (tmp.walls[12].left < 300 || tmp.walls[12].left > 400) {
+          speed[3] *= -1;
+        }
+
+        _this2.setState({
+          tmp: tmp
+        });
+      }, 10);
+    }
+  }, {
+    key: "checkCollisions",
+    value: function checkCollisions() {
+      var _this3 = this;
+
+      setInterval(function () {
+        var p = {
+          x: _this3.state.player.position.x,
+          y: _this3.state.player.position.y,
+          width: _this3.state.player.size.width,
+          height: _this3.state.player.size.height
+        };
+
+        if (playerHitWall(_this3.state.walls, p)) {
+          var tmp = Object.assign({}, _this3.state);
+          tmp.player.position = tmp.player.startPos;
+          tmp.player.dragging = false;
+          tmp.player.losses += 1;
+
+          _this3.setState({
+            tmp: tmp
+          });
+
+          console.log(_this3.state.player.losses);
+        }
+
+        if (playerHitExit(_this3.state.exit, p)) {
+          _this3.handleOpenModal();
+        }
+      }, 10);
+    }
+  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       _reactModal.default.setAppElement('body');
@@ -35250,26 +35316,6 @@ function (_React$Component2) {
         this.setState({
           tmp: tmp
         });
-        var p = {
-          x: this.state.player.position.x,
-          y: this.state.player.position.y,
-          width: this.state.player.size.width,
-          height: this.state.player.size.height
-        };
-
-        if (playerHitWall(this.state.walls, p)) {
-          tmp = Object.assign({}, this.state);
-          tmp.player.position = tmp.player.startPos;
-          tmp.player.dragging = false;
-          tmp.losses += 1;
-          this.setState({
-            tmp: tmp
-          });
-        }
-
-        if (playerHitExit(this.state.exit, p)) {
-          this.handleOpenModal();
-        }
       }
     }
   }, {
@@ -35302,7 +35348,7 @@ function (_React$Component2) {
       tmp.player.opacity = 0;
       tmp.player.position = tmp.player.startPos;
       tmp.player.dragging = false;
-      tmp.wins += 1;
+      tmp.player.wins += 1;
       this.setState({
         tmp: tmp
       });
@@ -35346,13 +35392,14 @@ function (_React$Component2) {
   }, {
     key: "render",
     value: function render() {
-      var winLoss = "Wins: ".concat(this.state.wins, "  ---   Losses: ").concat(this.state.losses);
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
         centered_hv: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
         overlay: "#ffff0022"
-      }, _react.default.createElement(_Typography.Heading, null, "Simple drag game."), _react.default.createElement(_Typography.Text, null, "Drag the piece in the top left to the exit in the bottom left.  If you touch a wall you'll have to start over."), _react.default.createElement(Board, {
+      }, _react.default.createElement(_Typography.Heading, null, "Simple drag game."), _react.default.createElement(_Typography.Text, {
+        centered: true
+      }, "Drag the piece in the top left to the exit in the bottom left.  If you touch a wall you'll have to start over.", _react.default.createElement("br", null), "Wins: ", this.state.player.wins, "  ---   Losses: ", this.state.player.losses), _react.default.createElement(Board, {
         id: "board",
         height: "500",
         width: "500",
@@ -35705,7 +35752,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55384" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62844" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
