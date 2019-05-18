@@ -32610,7 +32610,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  padding: 8px 12px;\n  font-size: 16px;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  color: #fff;\n  background: transparent;\n  border: 2px solid;\n  cursor: pointer;\n  transition: color .25s ease-in-out;\n\n  &:hover {\n    color: #888;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 8px 12px;\n  font-size: 16px;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  color: #fff;\n  background: transparent;\n  border: 2px solid;\n  cursor: pointer;\n  transition: color .25s ease-in-out;\n\n  &:hover {\n    border-color: #006666;\n    color: #009999;\n    background: #005555;\n  }\n\n  &:active {\n    color: #005555;\n    background: #009999;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32943,7 +32943,7 @@ function (_React$Component) {
         color: "#fff"
       }, _react.default.createElement(_Typography.Heading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Subheading, null, "Designer & developer"), _react.default.createElement(HomeButton, {
         href: "/portfolio"
-      }, "My work")));
+      }, "Portfolio")));
     }
   }]);
 
@@ -33217,6 +33217,8 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+// Import resume
+// import resume from '../../files/Okapal_Dominic_Resume.docx';
 var ContactLink = (0, _styledComponents.default)(_Link.default)(_templateObject());
 
 var SocialMediaList = _styledComponents.default.ul(_templateObject2());
@@ -33243,7 +33245,11 @@ function (_React$Component) {
         centered_h: true,
         padding_t: "8%",
         color: "#000"
-      }, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(_Typography.Text, null, "I'm available for freelance work.  If you are interested, contact me."), _react.default.createElement(ContactLink, {
+      }, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(_Typography.Text, null, "If you are interested, ", _react.default.createElement(_Link.default, {
+        href: "mailto:dominic.okapal@gmail.com"
+      }, "contact me"), ". Or checkout my ", _react.default.createElement(_Link.default, {
+        href: resume
+      }, "resume"), "."), _react.default.createElement(ContactLink, {
         href: "mailto:domiic.okapal@gmail.com"
       }, "dominic.okapal@gmail.com"), _react.default.createElement(_Typography.Text, null, "Follow me on the web:"), _react.default.createElement(SocialMediaList, null, _react.default.createElement("li", null, _react.default.createElement(_Link.default, {
         href: "https://github.com/OkapalDominic",
@@ -35469,7 +35475,81 @@ function (_React$Component2) {
 }(_react.default.Component);
 
 exports.default = Game;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-modal":"node_modules/react-modal/lib/index.js","react-dom":"node_modules/react-dom/index.js","../components/Container":"src/App/components/Container.js","../components/Link":"src/App/components/Link.js","../components/Section":"src/App/components/Section.js","../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/App/components/Nav.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-modal":"node_modules/react-modal/lib/index.js","react-dom":"node_modules/react-dom/index.js","../components/Container":"src/App/components/Container.js","../components/Link":"src/App/components/Link.js","../components/Section":"src/App/components/Section.js","../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/App/pages/404.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _Button = _interopRequireDefault(require("../components/Button"));
+
+var _Container = _interopRequireDefault(require("./../components/Container"));
+
+var _Link = _interopRequireDefault(require("./../components/Link"));
+
+var _Section = _interopRequireDefault(require("./../components/Section"));
+
+var _Typography = require("./../components/Typography");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var HomeButton = _Button.default.withComponent('a');
+
+var FourOhFour =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(FourOhFour, _React$Component);
+
+  function FourOhFour() {
+    _classCallCheck(this, FourOhFour);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(FourOhFour).apply(this, arguments));
+  }
+
+  _createClass(FourOhFour, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_Section.default, {
+        fullHeight: true
+      }, _react.default.createElement(_Container.default, {
+        centered_h: true,
+        padding_t: "8%",
+        color: "#fff"
+      }, _react.default.createElement(_Typography.Heading, null, "Uh Oh!"), _react.default.createElement(_Typography.Subheading, null, "404!?"), _react.default.createElement(_Typography.Text, null, "I don't think there's anything here..."), _react.default.createElement(HomeButton, {
+        href: "/"
+      }, "Try starting over.")));
+    }
+  }]);
+
+  return FourOhFour;
+}(_react.default.Component);
+
+exports.default = FourOhFour;
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../components/Button":"src/App/components/Button.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js"}],"src/App/components/Nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35558,7 +35638,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 999;\n  width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 999;\n  width: 100%;\n  padding-right: 10%;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -35619,9 +35699,7 @@ function (_React$Component) {
         href: "/about"
       }, "About")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/portfolio"
-      }, "Portfolio")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
-        href: "/contact"
-      }, "Contact")))));
+      }, "Portfolio")))));
     }
   }]);
 
@@ -35650,6 +35728,8 @@ var _Contact = _interopRequireDefault(require("./pages/Contact"));
 var _Portfolio = _interopRequireDefault(require("./pages/Portfolio"));
 
 var _Game = _interopRequireDefault(require("./pages/Game"));
+
+var _ = _interopRequireDefault(require("./pages/404"));
 
 var _Nav = _interopRequireDefault(require("./components/Nav"));
 
@@ -35694,17 +35774,19 @@ function (_React$Component) {
         path: "/",
         component: _Home.default
       }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/home",
+        component: _Home.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/about",
         component: _About.default
-      }), _react.default.createElement(_reactRouterDom.Route, {
-        path: "/contact",
-        component: _Contact.default
       }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/portfolio",
         component: _Portfolio.default
       }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/examples/game",
         component: _Game.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        component: _.default
       }));
     }
   }]);
@@ -35713,7 +35795,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Main;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/Home":"src/App/pages/Home.js","./pages/About":"src/App/pages/About.js","./pages/Contact":"src/App/pages/Contact.js","./pages/Portfolio":"src/App/pages/Portfolio.js","./pages/Game":"src/App/pages/Game.js","./components/Nav":"src/App/components/Nav.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/Home":"src/App/pages/Home.js","./pages/About":"src/App/pages/About.js","./pages/Contact":"src/App/pages/Contact.js","./pages/Portfolio":"src/App/pages/Portfolio.js","./pages/Game":"src/App/pages/Game.js","./pages/404":"src/App/pages/404.js","./components/Nav":"src/App/components/Nav.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -35776,7 +35858,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51654" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58732" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

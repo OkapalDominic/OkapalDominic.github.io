@@ -17,7 +17,7 @@ import img768x1024 from '../../images/home/768x1024.jpg';
 import img480x800 from '../../images/home/480x800.jpg';
 
 // Using Button component but changing the element to 'a'
-const HomeButton = Button.withComponent('a')
+const HomeButton = Button.withComponent('a');
 
 export default class Home extends React.Component {
   render() {
@@ -28,7 +28,7 @@ export default class Home extends React.Component {
 
           <Subheading>Designer & developer</Subheading>
 
-          <HomeButton href="/portfolio">My work</HomeButton>
+          <HomeButton href="/portfolio">Portfolio</HomeButton>
         </Container>
       </Section>
     );

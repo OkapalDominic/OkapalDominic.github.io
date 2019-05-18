@@ -5,6 +5,7 @@
   "description": "A portfolio site for Dominic Okapal",
   "main": "index.js",
   "dependencies": {
+    "components": "^0.1.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

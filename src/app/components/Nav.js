@@ -10,6 +10,7 @@ const Header = styled.header`
   left: 0;
   z-index: 999;
   width: 100%;
+  padding-right: 10%;
 `
 
 const NavWrapper = styled.nav`
@@ -112,9 +113,9 @@ export default class Nav extends React.Component {
                             <Link href="/portfolio">Portfolio</Link>
                         </NavItem>
 
-                        <NavItem>
+                        {/* <NavItem>
                             <Link href="/contact">Contact</Link>
-                        </NavItem>
+                        </NavItem> */}
                     </NavList>
                 </NavWrapper>
             </Header>

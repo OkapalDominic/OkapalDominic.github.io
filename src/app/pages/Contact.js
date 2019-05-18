@@ -14,6 +14,9 @@ import img1280x800 from '../../images/about/1280x800.jpg';
 import img768x1024 from '../../images/about/768x1024.jpg';
 import img480x800 from '../../images/about/480x800.jpg';
 
+// Import resume
+// import resume from '../../files/Okapal_Dominic_Resume.docx';
+
 const ContactLink = styled(Link)`
     margin-bottom: 32px;
     display: inline-block;
@@ -53,7 +56,7 @@ export default class Contact extends React.Component {
                 <Container centered_h padding_t="8%" color="#000">
                     <Heading>Say hello</Heading>
 
-                    <Text>I'm available for freelance work.  If you are interested, contact me.</Text>
+                    <Text>If you are interested, <Link href="mailto:dominic.okapal@gmail.com">contact me</Link>. Or checkout my <Link href={resume}>resume</Link>.</Text>
 
                     <ContactLink href="mailto:domiic.okapal@gmail.com">dominic.okapal@gmail.com</ContactLink>
 
