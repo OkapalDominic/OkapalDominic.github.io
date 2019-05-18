@@ -35769,7 +35769,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "wrapper"
-      }, _react.default.createElement(_Nav.default, null), _react.default.createElement(_reactRouterDom.Route, {
+      }, _react.default.createElement(_Nav.default, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
         exact: true,
         path: "/",
         component: _Home.default
@@ -35787,7 +35787,7 @@ function (_React$Component) {
         component: _Game.default
       }), _react.default.createElement(_reactRouterDom.Route, {
         component: _.default
-      }));
+      })));
     }
   }]);
 
@@ -35858,7 +35858,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58732" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61909" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

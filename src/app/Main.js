@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 
 import Home from './pages/Home';
@@ -16,13 +16,15 @@ export default class Main extends React.Component {
         return (
             <div className="wrapper">
                 <Nav />
-                <Route exact={true} path="/" component={Home} />
-                <Route path="/home" component={Home} />
-                <Route path="/about" component={About} />
-                {/* <Route path="/contact" component={Contact} /> */}
-                <Route path="/portfolio" component={Portfolio} />
-                <Route path="/examples/game" component={Game} />
-                <Route component={FourOhFour} />
+                <Switch>
+                    <Route exact={true} path="/" component={Home} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/about" component={About} />
+                    {/* <Route path="/contact" component={Contact} /> */}
+                    <Route path="/portfolio" component={Portfolio} />
+                    <Route path="/examples/game" component={Game} />
+                    <Route component={FourOhFour} />
+                </Switch>
             </div>
         );
     }
