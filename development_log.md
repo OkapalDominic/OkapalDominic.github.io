@@ -4,6 +4,10 @@
 
 <p align="center">By Dominic Okapal</p>
 
+Repo: [https://github.com/OkapalDominic/okapaldominic.github.io][myRepo]
+
+Site: [https://okapaldominic.github.io/][mySite]
+
 ---
 
 ## Part 1: Getting Started
@@ -39,3 +43,4 @@ I decided to create a simple game in React.  You have to drag a blue block throu
 [injectGlobal]: https://www.styled-components.com/docs/api#deprecated-injectglobal
 [createGlobalStyle]: https://www.styled-components.com/docs/api#createglobalstyle
 [myRepo]: https://github.com/OkapalDominic/okapaldominic.github.io
+[mySite]: https://okapaldominic.github.io/
