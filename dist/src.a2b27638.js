@@ -33043,6 +33043,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    flex-grow: ", ";\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 50%;\n    border: 5px solid #663333;\n"]);
 
@@ -33056,6 +33076,12 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var ProfileImage = _styledComponents.default.img(_templateObject());
+
+var Row = _styledComponents.default.div(_templateObject2());
+
+var RowItem = _styledComponents.default.div(_templateObject3(), function (props) {
+  return props.size || 0;
+});
 
 var About =
 /*#__PURE__*/
@@ -33079,18 +33105,16 @@ function (_React$Component) {
         centered_h: true,
         padding_t: "8%",
         color: "#000"
-      }, _react.default.createElement("div", {
-        style: {
-          float: 'left'
-        }
-      }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me")), _react.default.createElement(ProfileImage, {
+      }, _react.default.createElement(Row, null, _react.default.createElement(RowItem, null, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me")), _react.default.createElement(RowItem, null, _react.default.createElement(ProfileImage, {
         src: _profile.default,
         alt: "profile"
-      }), _react.default.createElement(_Typography.Text, {
+      }))), _react.default.createElement(_Typography.Text, {
         background_color: "#ffffff2f"
-      }, "I am a student at Portland State University studying Computer Science. I was born in Beaverton Oregon where I graduated from Sunset High School and went into the Air Force for 6 years."), _react.default.createElement(_Typography.Text, {
+      }, "I was born and raised in Portland, Oregon. Upon graduating from Sunset High School, I joined the Air Force and served for 6 years. Shortly after moving back to Portland, I got married to an amazing woman. We now have four wonderful children."), _react.default.createElement(_Typography.Text, {
         background_color: "#ffffff2f"
-      }, "I am now married to an amazing woman with four amazing children and am looking for work as a web developer.")));
+      }, "Currently, I am working toward a Computer Science degree at Portland State University. As electives, I have taken Computational Structures, Computer Graphics, Full-Stack Web Development, Internet & Cloud Systems, Intro to Human Computer Interactions, and Intro to Visual Computing.  I really enjoyed my Capstone.  It was great to work in a large team and experience Git in that setting. Being the point-of-contact, I was able to use what I learned in Intro to Human Computer Interactions. Since our Capstone project was a web app built with Angular, I was grateful to be able to apply what I learned in Full-Stack Web Development."), _react.default.createElement(_Typography.Text, {
+        background_color: "#ffffff2f"
+      }, "I am excited to jump start my career as a web developer.")));
     }
   }]);
 
@@ -35752,7 +35776,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62844" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51654" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
