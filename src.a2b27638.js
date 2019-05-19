@@ -32779,7 +32779,7 @@ var Section = _styledComponents.default.section(_templateObject(), function (pro
   }, function (props) {
     return props.images[0];
   }, function (props) {
-    return props.overlay || '#00000066';
+    return props.overlay || 'rgba(0, 0, 0, 0.4)';
   });
 });
 
@@ -32848,7 +32848,7 @@ var Subheading = _styledComponents.default.h2(_templateObject2());
 exports.Subheading = Subheading;
 
 var Text = _styledComponents.default.p(_templateObject3(), function (props) {
-  return props.background_color || "#ffffff00";
+  return props.background_color || "rgba(255, 255, 255, 0)";
 }, function (props) {
   return props.centered && (0, _styledComponents.css)(_templateObject4());
 });
@@ -32936,7 +32936,7 @@ function (_React$Component) {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
-        overlay: "#00000088"
+        overlay: "rgba(0, 0, 0, 0.53)"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
@@ -33100,7 +33100,7 @@ function (_React$Component) {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
-        overlay: "#00ffff22"
+        overlay: "rgba(0, 255, 255, 0.13)"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
@@ -33109,11 +33109,11 @@ function (_React$Component) {
         src: _profile.default,
         alt: "profile"
       }))), _react.default.createElement(_Typography.Text, {
-        background_color: "#ffffff2f"
+        background_color: "rgba(255, 255, 255, 0.18)"
       }, "I was born and raised in Portland, Oregon. Upon graduating from Sunset High School, I joined the Air Force and served for 6 years. Shortly after moving back to Portland, I got married to an amazing woman. We now have four wonderful children."), _react.default.createElement(_Typography.Text, {
-        background_color: "#ffffff2f"
+        background_color: "rgba(255, 255, 255, 0.18)"
       }, "Currently, I am working toward a Computer Science degree at Portland State University. As electives, I have taken Computational Structures, Computer Graphics, Full-Stack Web Development, Internet & Cloud Systems, Intro to Human Computer Interactions, and Intro to Visual Computing.  I really enjoyed my Capstone.  It was great to work in a large team and experience Git in that setting. Being the point-of-contact, I was able to use what I learned in Intro to Human Computer Interactions. Since our Capstone project was a web app built with Angular, I was grateful to be able to apply what I learned in Full-Stack Web Development."), _react.default.createElement(_Typography.Text, {
-        background_color: "#ffffff2f"
+        background_color: "rgba(255, 255, 255, 0.18)"
       }, "I am excited to jump start my career as a web developer.")));
     }
   }]);
@@ -33240,7 +33240,7 @@ function (_React$Component) {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
-        overlay: "#8aff8a49"
+        overlay: "rgba(138, 255, 138, 0.29)"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
@@ -33346,7 +33346,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    opacity: 0;\n    transition: opacity .25s ease-in-out;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: black;\n    background-color: #ffffff99;\n    border: 1px solid #ffffff00;\n    border-radius: 10px;\n    width: 98%;\n    padding: 3px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    opacity: 0;\n    transition: opacity .25s ease-in-out;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: black;\n    background-color: rgba(255, 255, 255, 0.6);\n    border: 1px solid rgba(255, 255, 255, 0);\n    border-radius: 10px;\n    width: 98%;\n    padding: 3px;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -33414,7 +33414,7 @@ function (_React$Component) {
       return _react.default.createElement(PortfolioWrapper, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
-        overlay: "#ffff0022"
+        overlay: "rgba(255, 255, 0, 0.13)"
       }, _react.default.createElement(_Container.default, {
         centered_h: true
       }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
@@ -34959,7 +34959,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n    height: ", ";\n    width: ", ";\n    background-color: #6633336a;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: relative;\n    height: ", ";\n    width: ", ";\n    background-color: rgba(102, 51, 51, 0.42);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -35426,7 +35426,7 @@ function (_React$Component2) {
         fullHeight: true,
         centered_hv: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
-        overlay: "#ffff0022"
+        overlay: "rgba(255, 255, 0, 0.13)"
       }, _react.default.createElement(_Typography.Heading, null, "Simple drag game."), _react.default.createElement(_Typography.Text, {
         centered: true
       }, "Drag the piece in the top left to the exit in the bottom left.  If you touch a wall you'll have to start over.", _react.default.createElement("br", null), "Wins: ", this.state.player.wins, "  ---   Losses: ", this.state.player.losses), _react.default.createElement(Board, {
@@ -35769,7 +35769,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "wrapper"
-      }, _react.default.createElement(_Nav.default, null), _react.default.createElement(_reactRouterDom.Route, {
+      }, _react.default.createElement(_Nav.default, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
         exact: true,
         path: "/",
         component: _Home.default
@@ -35787,7 +35787,7 @@ function (_React$Component) {
         component: _Game.default
       }), _react.default.createElement(_reactRouterDom.Route, {
         component: _.default
-      }));
+      })));
     }
   }]);
 
@@ -35858,7 +35858,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58732" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58520" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
