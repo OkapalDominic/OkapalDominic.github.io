@@ -45,11 +45,15 @@ const NavList = styled.ul`
   list-style-type: none;
   height: auto;
   max-height: 0;
+  border: 2px solid #006666;
+  background: #005555;
 
   @media (min-width: 480px) {
     flex-direction: row;
     justify-content: flex-end;
     max-height: 1000px;
+    border: none;
+    background: transparent;
   }
 `
 
@@ -58,19 +62,23 @@ const NavItem = styled.li`
     margin-top: 12px;
   }
 
+  a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #009999;
+    transition: color .25s ease-in-out;
+  }
+
   @media (min-width: 480px) {
     & + & {
       margin-top: 0;
       margin-left: 32px;
     }
-  }
 
-  a {
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    transition: color .25s ease-in-out;
+    a {
+      color: #fff;
+    }
   }
 `
 
@@ -81,47 +89,47 @@ const NavButton = styled(Button)`
 `
 
 export default class Nav extends React.Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props)
 
-        this.state = {
-            show: false
-        }
-
-        this.toggleMenu = this.toggleMenu.bind(this)
+    this.state = {
+      show: false
     }
 
-    toggleMenu() {
-        this.setState({
-            show: !this.state.show
-        })
-    }
+    this.toggleMenu = this.toggleMenu.bind(this)
+  }
 
-    render() {
-        return (
-            <Header>
-                <NavWrapper isOpen={this.state.show}>
-                    <NavButton onClick={this.toggleMenu}>Menu</NavButton>
+  toggleMenu() {
+    this.setState({
+      show: !this.state.show
+    })
+  }
 
-                    <NavList>
-                        <NavItem>
-                            <Link href="/">Home</Link>
-                        </NavItem>
+  render() {
+    return (
+      <Header>
+        <NavWrapper isOpen={this.state.show}>
+          <NavButton onClick={this.toggleMenu}>Menu</NavButton>
 
-                        <NavItem>
-                            <Link href="/about">About</Link>
-                        </NavItem>
+          <NavList>
+            <NavItem>
+              <Link href="/">Home</Link>
+            </NavItem>
 
-                        <NavItem>
-                            <Link href="/portfolio">Portfolio</Link>
-                        </NavItem>
+            <NavItem>
+              <Link href="/about">About</Link>
+            </NavItem>
 
-                        {/* <NavItem>
+            <NavItem>
+              <Link href="/portfolio">Portfolio</Link>
+            </NavItem>
+
+            {/* <NavItem>
                             <Link href="/contact">Contact</Link>
                         </NavItem> */}
-                    </NavList>
-                </NavWrapper>
-            </Header>
-        )
-    }
+          </NavList>
+        </NavWrapper>
+      </Header>
+    )
+  }
 }

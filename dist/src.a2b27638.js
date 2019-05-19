@@ -35610,7 +35610,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  & + & {\n    margin-top: 12px;\n  }\n\n  @media (min-width: 480px) {\n    & + & {\n      margin-top: 0;\n      margin-left: 32px;\n    }\n  }\n\n  a {\n    font-size: 16px;\n    font-weight: bold;\n    text-decoration: none;\n    color: #fff;\n    transition: color .25s ease-in-out;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  & + & {\n    margin-top: 12px;\n  }\n\n  a {\n    font-size: 16px;\n    font-weight: bold;\n    text-decoration: none;\n    color: #009999;\n    transition: color .25s ease-in-out;\n  }\n\n  @media (min-width: 480px) {\n    & + & {\n      margin-top: 0;\n      margin-left: 32px;\n    }\n\n    a {\n      color: #fff;\n    }\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -35620,7 +35620,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  display: flex;\n  overflow: hidden;\n  flex-direction: column;\n  justify-content: flex-end;\n  list-style-type: none;\n  height: auto;\n  max-height: 0;\n\n  @media (min-width: 480px) {\n    flex-direction: row;\n    justify-content: flex-end;\n    max-height: 1000px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  display: flex;\n  overflow: hidden;\n  flex-direction: column;\n  justify-content: flex-end;\n  list-style-type: none;\n  height: auto;\n  max-height: 0;\n  border: 2px solid #006666;\n  background: #005555;\n\n  @media (min-width: 480px) {\n    flex-direction: row;\n    justify-content: flex-end;\n    max-height: 1000px;\n    border: none;\n    background: transparent;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -35870,7 +35870,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54446" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55037" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
