@@ -52,7 +52,7 @@ const SocialMediaList = styled.ul`
 export default class Contact extends React.Component {
     render() {
         return (
-            <Section fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="#8aff8a49">
+            <Section fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="rgba(138, 255, 138, 0.29)">
                 <Container centered_h padding_t="8%" color="#000">
                     <Heading>Say hello</Heading>
 

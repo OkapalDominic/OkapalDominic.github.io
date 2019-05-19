@@ -46,7 +46,7 @@ export const Text = styled.p`
   margin-top: 0;
   font-size: 16px;
 
-  background-color: ${props => (props.background_color || "#ffffff00")};
+  background-color: ${props => (props.background_color || "rgba(255, 255, 255, 0)")};
   border-radius: 5px;
   padding: 5px;
 

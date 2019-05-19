@@ -55,7 +55,7 @@ const Section = styled.section`
             content: '';
             width: 100%;
             height: 100%;
-            background-color: ${props => props.overlay || '#00000066'};
+            background-color: ${props => props.overlay || 'rgba(0, 0, 0, 0.4)'};
         }
 
     `}

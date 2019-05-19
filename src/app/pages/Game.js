@@ -37,7 +37,7 @@ export const Board = styled.div`
     position: relative;
     height: ${props => props.height + 'px'};
     width: ${props => props.width + 'px'};
-    background-color: #6633336a;
+    background-color: rgba(102, 51, 51, 0.42);
 `
 
 export const PlayerSprite = styled.div.attrs(
@@ -275,7 +275,12 @@ export default class Game extends React.Component {
 
     checkCollisions() {
         setInterval(() => {
-            let p = { x: this.state.player.position.x, y: this.state.player.position.y, width: this.state.player.size.width, height: this.state.player.size.height };
+            let p = {
+                x: this.state.player.position.x,
+                y: this.state.player.position.y,
+                width: this.state.player.size.width,
+                height: this.state.player.size.height
+            };
 
             if (playerHitWall(this.state.walls, p)) {
                 let tmp = Object.assign({}, this.state);
@@ -346,7 +351,7 @@ export default class Game extends React.Component {
 
     render() {
         return (
-            <Section fullHeight centered_hv images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="#ffff0022">
+            <Section fullHeight centered_hv images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="rgba(255, 255, 0, 0.13)">
                 <Heading>
                     Simple drag game.
                 </Heading>

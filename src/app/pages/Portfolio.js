@@ -45,8 +45,8 @@ const PortfolioItemThumbnailText = styled(Text)`
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
-    background-color: #ffffff99;
-    border: 1px solid #ffffff00;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 10px;
     width: 98%;
     padding: 3px;
@@ -121,7 +121,11 @@ const PortfolioItem = styled.a`
 export default class Portfolio extends React.Component {
     render() {
         return (
-            <PortfolioWrapper fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="#ffff0022">
+            <PortfolioWrapper
+                fullHeight
+                images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]}
+                overlay="rgba(255, 255, 0, 0.13)"
+            >
                 <Container centered_h>
                     <Subheading>Dominic Okapal</Subheading>
 
