@@ -7,7 +7,7 @@ import Section from './../components/Section';
 import { Heading, Subheading, Text } from './../components/Typography';
 
 // Import images
-import profile from '../../images/about/profile.jpg';
+import profile from '../../images/about/profile2.jpg';
 import img1920x1080 from '../../images/about/1920x1080.jpg';
 import img1600x900 from '../../images/about/1600x900.jpg';
 import img1280x800 from '../../images/about/1280x800.jpg';
@@ -16,18 +16,28 @@ import img480x800 from '../../images/about/480x800.jpg';
 
 const ProfileImage = styled.img`
     width: 10em;
-    border-radius: 50%;
-    border: 5px solid #663333;
+    border-radius: 5%;
+    margin-bottom: 20px;
 `
 
 const Row = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 `
 
 const RowItem = styled.div`
     flex-grow: ${props => props.size || 0};
+`
+
+const AboutSubheading = styled(Subheading)`
+    padding-top: 40px;
+    margin-bottom: 0;
+
+    & + h1 {
+        margin-top: 10px;
+    }
 `
 
 export default class About extends React.Component {
@@ -37,7 +47,7 @@ export default class About extends React.Component {
                 <Container centered_h padding_t="8%" color="#000">
                     <Row>
                         <RowItem>
-                            <Subheading>Dominic Okapal</Subheading>
+                            <AboutSubheading>Dominic Okapal</AboutSubheading>
                             <Heading>About Me</Heading>
                         </RowItem>
                         <RowItem>
