@@ -32979,8 +32979,8 @@ var Link = _styledComponents.default.a(_templateObject());
 
 var _default = Link;
 exports.default = _default;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/images/about/profile.jpg":[function(require,module,exports) {
-module.exports = "/profile.adccfa41.jpg";
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/images/about/profile2.jpg":[function(require,module,exports) {
+module.exports = "/profile2.77d04257.jpg";
 },{}],"src/images/about/1920x1080.jpg":[function(require,module,exports) {
 module.exports = "/1920x1080.d6ca55da.jpg";
 },{}],"src/images/about/1600x900.jpg":[function(require,module,exports) {
@@ -33011,7 +33011,7 @@ var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
 
-var _profile = _interopRequireDefault(require("../../images/about/profile.jpg"));
+var _profile = _interopRequireDefault(require("../../images/about/profile2.jpg"));
 
 var _x = _interopRequireDefault(require("../../images/about/1920x1080.jpg"));
 
@@ -33043,6 +33043,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    padding-top: 40px;\n    margin-bottom: 0;\n\n    & + h1 {\n        margin-top: 10px;\n    }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n    flex-grow: ", ";\n"]);
 
@@ -33054,7 +33064,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -33064,7 +33074,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 50%;\n    border: 5px solid #663333;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 5%;\n    margin-bottom: 20px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33082,6 +33092,8 @@ var Row = _styledComponents.default.div(_templateObject2());
 var RowItem = _styledComponents.default.div(_templateObject3(), function (props) {
   return props.size || 0;
 });
+
+var AboutSubheading = (0, _styledComponents.default)(_Typography.Subheading)(_templateObject4());
 
 var About =
 /*#__PURE__*/
@@ -33105,7 +33117,7 @@ function (_React$Component) {
         centered_h: true,
         padding_t: "8%",
         color: "#000"
-      }, _react.default.createElement(Row, null, _react.default.createElement(RowItem, null, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me")), _react.default.createElement(RowItem, null, _react.default.createElement(ProfileImage, {
+      }, _react.default.createElement(Row, null, _react.default.createElement(RowItem, null, _react.default.createElement(AboutSubheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me")), _react.default.createElement(RowItem, null, _react.default.createElement(ProfileImage, {
         src: _profile.default,
         alt: "profile"
       }))), _react.default.createElement(_Typography.Text, {
@@ -33122,7 +33134,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = About;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/profile.jpg":"src/images/about/profile.jpg","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/App/components/AwesomeIcon.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/profile2.jpg":"src/images/about/profile2.jpg","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/App/components/AwesomeIcon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35858,7 +35870,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58520" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52570" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
