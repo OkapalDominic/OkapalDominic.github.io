@@ -10,7 +10,10 @@ const Header = styled.header`
   left: 0;
   z-index: 999;
   width: 100%;
-  padding-right: 10%;
+
+  @media (min-width: 480px) {
+    padding-right: 10%;
+  }
 `
 
 const NavWrapper = styled.nav`
