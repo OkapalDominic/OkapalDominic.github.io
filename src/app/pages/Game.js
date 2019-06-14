@@ -19,6 +19,15 @@ import img480x800 from '../../images/about/480x800.jpg';
 const wallColor = '#662412';
 //
 
+const vwOrvh = () => {
+    let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    if(w > h) {
+        return 'vh';
+    }
+    return 'vw';
+}
+
 export const Wall = styled.div.attrs(
     props => ({
         style: {
@@ -91,97 +100,128 @@ class Player extends React.Component {
     }
 }
 
-function createWalls(obj, color) {
+function createWalls(obj, color, maxSize) {
+    let wallWidth = .04 * maxSize;
+    let borderWidth = .01 * maxSize;
+    // Border Left wall
     obj.state.walls.push({
-        width: 8,
-        height: 500,
+        width: borderWidth,
+        height: maxSize,
         color: color,
         top: 0,
         left: 0
     });
+    // Border right wall
     obj.state.walls.push({
-        width: 8,
-        height: 500,
+        width: borderWidth,
+        height: maxSize,
         color: color,
         top: 0,
-        left: 500
+        left: maxSize - borderWidth
     });
+    // Border top wall
     obj.state.walls.push({
-        width: 500,
-        height: 8,
+        width: maxSize,
+        height: borderWidth,
         color: color,
         top: 0,
         left: 0
     });
+    // Border bottom wall
     obj.state.walls.push({
-        width: 500,
-        height: 8,
+        width: maxSize,
+        height: borderWidth,
         color: color,
-        top: 492,
+        top: maxSize - borderWidth,
         left: 0
     });
+    // Vertical left-most wall
     obj.state.walls.push({
-        width: 300,
-        height: 40,
+        width: wallWidth,
+        height: .75 * maxSize,
         color: color,
-        top: 400,
-        left: 0
+        top: borderWidth,
+        left: .08 * maxSize
     });
+    // Vertical middle wall, move up and down
     obj.state.walls.push({
-        width: 130,
-        height: 40,
+        width: wallWidth,
+        height: .6 * maxSize,
         color: color,
-        top: 180,
-        left: 130
+        top: .18 * maxSize,
+        left: .35 * maxSize
     });
+    // Vertical right-most wall
     obj.state.walls.push({
-        width: 40,
-        height: 320,
+        width: wallWidth,
+        height: .75 * maxSize,
         color: color,
-        top: 50,
-        left: 175
+        top: .1 * maxSize,
+        left: .65 * maxSize
     });
+    // Horizontal cross in middle
     obj.state.walls.push({
-        width: 40,
-        height: 350,
+        width: .35 * maxSize,
+        height: wallWidth,
         color: color,
-        top: 0,
-        left: 50
+        top: .4 * maxSize,
+        left: .21 * maxSize
     });
+    // Horizontal top on right, move left to right
     obj.state.walls.push({
-        width: 40,
-        height: 350,
+        width: .2 * maxSize,
+        height: wallWidth,
         color: color,
-        top: 50,
-        left: 300
+        top: .1 * maxSize,
+        left: .65 * maxSize + wallWidth,
+        direction: 'horizontal',
+        speed: 1,
+        start: .65 * maxSize + wallWidth,
+        stop: maxSize - borderWidth - (.2 * maxSize)
     });
+    // Horizontal top middle on right, move left to right
     obj.state.walls.push({
-        width: 100,
-        height: 40,
+        width: .2 * maxSize,
+        height: wallWidth,
         color: color,
-        top: 50,
-        left: 340
+        top: .4 * maxSize,
+        left: .7 * maxSize + wallWidth,
+        direction: 'horizontal',
+        speed: 1.1,
+        start: .65 * maxSize + wallWidth,
+        stop: maxSize - borderWidth - (.2 * maxSize)
     });
+    // Horizontal bottom middle on right, move left to right
     obj.state.walls.push({
-        width: 100,
-        height: 40,
+        width: .2 * maxSize,
+        height: wallWidth,
         color: color,
-        top: 150,
-        left: 400
+        top: .6 * maxSize,
+        left: maxSize - borderWidth - (.2 * maxSize),
+        direction: 'horizontal',
+        speed: -1.3,
+        start: .65 * maxSize + wallWidth,
+        stop: maxSize - borderWidth - (.2 * maxSize)
     });
+    // Horizontal bottom on right, move left to right
     obj.state.walls.push({
-        width: 100,
-        height: 40,
+        width: .25 * maxSize,
+        height: wallWidth,
         color: color,
-        top: 250,
-        left: 340
+        top: .85 * maxSize,
+        left: .65 * maxSize,
+        direction: 'horizontal',
+        speed: 1.8,
+        start: .65 * maxSize,
+        stop: maxSize - borderWidth - (.25 * maxSize)
     });
+    // Horizontal bottom
     obj.state.walls.push({
-        width: 100,
-        height: 40,
-        color: color,
-        top: 400,
-        left: 400
+        width: wallWidth,
+        height: wallWidth,
+        color: '#5566ff',
+        top: 40,
+        left: 40
     });
 }
 
@@ -216,57 +256,60 @@ function playerHitExit(exit, player) {
 export default class Game extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            walls: Array(),
-            player: {
-                startPos: { x: 20, y: 10 },
-                position: { x: 20, y: 10 },
-                clickPos: { x: 10, y: 10 },
-                dragging: false,
-                size: { width: 15, height: 30 },
-                opacity: 1,
-                wins: 0,
-                losses: 0
-            },
-            exit: {
-                x: 15,
-                y: 450,
-                width: 30,
-                height: 30
-            },
-            modal: {
-                show: false
-            }
-        };
-        createWalls(this, wallColor);
+        this.initializeGame();
         this.handleMouseMove = this.handleMouseMove.bind(this);
         this.handleMouseDown = this.handleMouseDown.bind(this);
         this.handleMouseUp = this.handleMouseUp.bind(this);
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
 
-        this.moveWalls();
-        this.checkCollisions();
+    componentDidMount() {
+        ReactModal.setAppElement('body');
+        this.initializeGame();
+        window.addEventListener("resize", 
+        () => {
+            this.initializeGame();
+        });
     }
 
     moveWalls() {
         var speed = [1, 1, 1, 2];
+        let wallWidth = .01 * this.boardSize;
+        var dist = [
+            {
+                start: .01 * this.boardSize,
+                stop: this.boardSize - this.state.walls[6].height - wallWidth
+            },
+            {
+                start: this.boardSize - this.state.walls[9].width - wallWidth,
+                stop: .07 * this.boardSize
+            },
+            {
+                start: this.boardSize - this.state.walls[10].width - wallWidth,
+                stop: .7 * this.boardSize
+            },
+            {
+                start: this.boardSize - this.state.walls[12].width - wallWidth,
+                stop: .6 * this.boardSize
+            }
+        ]
         setInterval(() => {
             let tmp = Object.assign({}, this.state);
             tmp.walls[6].top += speed[0];
             tmp.walls[9].left += speed[1];
             tmp.walls[10].left += speed[2];
             tmp.walls[12].left += speed[3];
-            if (tmp.walls[6].top < 0 || tmp.walls[6].top > 180) {
+            if (tmp.walls[6].top < dist[0].start || tmp.walls[6].top > dist[0].stop) {
                 speed[0] *= -1;
             }
-            if (tmp.walls[9].left < 340 || tmp.walls[9].left > 400) {
+            if (tmp.walls[9].left < dist[1].start || tmp.walls[9].left > dist[1].stop) {
                 speed[1] *= -1;
             }
-            if (tmp.walls[10].left < 340 || tmp.walls[10].left > 400) {
+            if (tmp.walls[10].left < dist[2].start || tmp.walls[10].left > dist[2].stop) {
                 speed[2] *= -1;
             }
-            if (tmp.walls[12].left < 300 || tmp.walls[12].left > 400) {
+            if (tmp.walls[12].left < dist[3].start || tmp.walls[12].left > dist[3].stop) {
                 speed[3] *= -1;
             }
             this.setState({ tmp });
@@ -288,7 +331,6 @@ export default class Game extends React.Component {
                 tmp.player.dragging = false;
                 tmp.player.losses += 1;
                 this.setState({ tmp });
-                console.log(this.state.player.losses);
             }
             if (playerHitExit(this.state.exit, p)) {
                 this.handleOpenModal();
@@ -296,8 +338,45 @@ export default class Game extends React.Component {
         }, 10);
     }
 
-    componentDidMount() {
-        ReactModal.setAppElement('body');
+    initializeGame() {
+        this.boardSize = this.calculateBoardSize(.9);
+        let startPos = { x: .018 * this.boardSize, y: .02 * this.boardSize };
+        this.state = {
+            walls: Array(),
+            player: {
+                startPos: startPos,
+                position: startPos,
+                clickPos: startPos,
+                dragging: false,
+                size: { width: .028 * this.boardSize, height: .038 * this.boardSize },
+                opacity: 1,
+                wins: 0,
+                losses: 0
+            },
+            exit: {
+                x: .02 * this.boardSize,
+                y: 0.94 * this.boardSize,
+                width: .03 * this.boardSize,
+                height: .03 * this.boardSize
+            },
+            modal: {
+                show: false
+            }
+        };
+        createWalls(this, wallColor, this.boardSize);
+        //this.moveWalls();
+        this.checkCollisions();
+    }
+
+    updatePositions() {
+
+    }
+
+    calculateBoardSize(percentOfWindow) {
+        if(vwOrvh() === 'vh') {
+            return percentOfWindow * Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        }
+        return percentOfWindow * Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     }
 
     handleMouseMove(e) {
@@ -361,8 +440,8 @@ export default class Game extends React.Component {
                 </Text>
                 <Board
                     id="board"
-                    height="500"
-                    width="500"
+                    height={this.boardSize}
+                    width={this.boardSize}
                     onMouseMove={this.handleMouseMove}
                 >
                     <Player
@@ -392,8 +471,8 @@ export default class Game extends React.Component {
                     contentLabel="You Won!!!"
                     style={{
                         content: {
-                            width: "500px",
-                            height: "200px",
+                            width: "50em",
+                            height: "5em",
                             marginLeft: "auto",
                             marginRight: "auto"
                         }
