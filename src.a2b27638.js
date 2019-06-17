@@ -32610,7 +32610,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  padding: 8px 12px;\n  font-size: 16px;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  color: #fff;\n  background: transparent;\n  border: 2px solid;\n  cursor: pointer;\n  transition: color .25s ease-in-out;\n\n  &:hover {\n    border-color: #006666;\n    color: #009999;\n    background: #005555;\n  }\n\n  &:active {\n    color: #005555;\n    background: #009999;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 8px 12px;\n  font-size: 16px;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  color: #fff;\n  background: transparent;\n  border: 2px solid;\n  cursor: pointer;\n  transition: color .25s ease-in-out;\n\n  &:hover {\n    border-color: #00ffff;\n    color: #00ffff;\n    background: #005555;\n  }\n\n  &:active {\n    color: #005555;\n    background: #009999;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32936,7 +32936,7 @@ function (_React$Component) {
       return _react.default.createElement(_Section.default, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
-        overlay: "rgba(0, 0, 0, 0.53)"
+        overlay: "rgba(0, 0, 0, 0.7)"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
         padding_t: "8%",
@@ -32964,7 +32964,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    font-weight: bold;\n    text-decoration: none;\n    color: #3a3a99;\n    transition: color .25s ease-in-out;\n\n    &:focus,\n    &:hover {\n        color: #006666;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-weight: bold;\n    text-decoration: none;\n    color: #3a3a99;\n    transition: color .25s ease-in-out;\n\n    &:focus,\n    &:hover {\n        color: #cc7722;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33043,8 +33043,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _templateObject4() {
+function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n    padding-top: 40px;\n    margin-bottom: 0;\n\n    & + h1 {\n        margin-top: 10px;\n    }\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    flex-grow: ", ";\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -33054,7 +33064,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    flex-grow: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -33064,7 +33074,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 5%;\n    margin-bottom: 20px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -33074,7 +33084,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 5%;\n    margin-bottom: 20px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-top: 120px;\n    padding-bottom: 80px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33085,15 +33095,17 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var ProfileImage = _styledComponents.default.img(_templateObject());
+var AboutWrapper = (0, _styledComponents.default)(_Section.default)(_templateObject());
 
-var Row = _styledComponents.default.div(_templateObject2());
+var ProfileImage = _styledComponents.default.img(_templateObject2());
 
-var RowItem = _styledComponents.default.div(_templateObject3(), function (props) {
+var Row = _styledComponents.default.div(_templateObject3());
+
+var RowItem = _styledComponents.default.div(_templateObject4(), function (props) {
   return props.size || 0;
 });
 
-var AboutSubheading = (0, _styledComponents.default)(_Typography.Subheading)(_templateObject4());
+var AboutSubheading = (0, _styledComponents.default)(_Typography.Subheading)(_templateObject5());
 
 var About =
 /*#__PURE__*/
@@ -33109,13 +33121,12 @@ function (_React$Component) {
   _createClass(About, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_Section.default, {
+      return _react.default.createElement(AboutWrapper, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
         overlay: "rgba(0, 255, 255, 0.13)"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
-        padding_t: "8%",
         color: "#000"
       }, _react.default.createElement(Row, null, _react.default.createElement(RowItem, null, _react.default.createElement(AboutSubheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "About Me")), _react.default.createElement(RowItem, null, _react.default.createElement(ProfileImage, {
         src: _profile.default,
@@ -33155,7 +33166,9 @@ var AwesomeIcon = function AwesomeIcon(_ref) {
 
 var _default = AwesomeIcon;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/App/pages/Contact.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/files/Okapal_Dominic_Resume.docx":[function(require,module,exports) {
+module.exports = "/Okapal_Dominic_Resume.9ce3f45c.docx";
+},{}],"src/App/pages/Contact.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33177,6 +33190,8 @@ var _Section = _interopRequireDefault(require("./../components/Section"));
 
 var _Typography = require("./../components/Typography");
 
+var _profile = _interopRequireDefault(require("../../images/about/profile2.jpg"));
+
 var _x = _interopRequireDefault(require("../../images/about/1920x1080.jpg"));
 
 var _x2 = _interopRequireDefault(require("../../images/about/1600x900.jpg"));
@@ -33186,6 +33201,8 @@ var _x3 = _interopRequireDefault(require("../../images/about/1280x800.jpg"));
 var _x4 = _interopRequireDefault(require("../../images/about/768x1024.jpg"));
 
 var _x5 = _interopRequireDefault(require("../../images/about/480x800.jpg"));
+
+var _Okapal_Dominic_Resume = _interopRequireDefault(require("../../files/Okapal_Dominic_Resume.docx"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33207,8 +33224,48 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _templateObject2() {
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n    width: 10em;\n    border-radius: 5%;\n    margin-bottom: 20px;\n    margin-left: 60%;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    flex-grow: ", ";\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n    padding: 0;\n    margin: 0;\n\n    li {\n        display: inline-block;\n        list-style-type: none;\n\n        &:not(:last-child) {\n            margin-right: 16px;\n        }\n    }\n\n    a {\n        font-size: 18px;\n\n        @media (min-width: 480px) {\n            font-size: 24px;\n        }\n    }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    margin-bottom: 32px;\n    display: inline-block;\n    font-size: 16px;\n\n    @media (min-width: 768px) {\n        font-size: 18px;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -33218,7 +33275,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 32px;\n    display: inline-block;\n    font-size: 16px;\n\n    @media (min-width: 768px) {\n        font-size: 18px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-top: 120px;\n    padding-bottom: 80px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33229,11 +33286,18 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-// Import resume
-// import resume from '../../files/Okapal_Dominic_Resume.docx';
-var ContactLink = (0, _styledComponents.default)(_Link.default)(_templateObject());
+var ContactWrapper = (0, _styledComponents.default)(_Section.default)(_templateObject());
+var ContactLink = (0, _styledComponents.default)(_Link.default)(_templateObject2());
 
-var SocialMediaList = _styledComponents.default.ul(_templateObject2());
+var SocialMediaList = _styledComponents.default.ul(_templateObject3());
+
+var Row = _styledComponents.default.div(_templateObject4());
+
+var RowItem = _styledComponents.default.div(_templateObject5(), function (props) {
+  return props.size || 0;
+});
+
+var ProfileImage = _styledComponents.default.img(_templateObject6());
 
 var Contact =
 /*#__PURE__*/
@@ -33249,21 +33313,18 @@ function (_React$Component) {
   _createClass(Contact, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_Section.default, {
+      return _react.default.createElement(ContactWrapper, {
         fullHeight: true,
         images: [_x.default, _x2.default, _x3.default, _x4.default, _x5.default],
         overlay: "rgba(138, 255, 138, 0.29)"
       }, _react.default.createElement(_Container.default, {
         centered_h: true,
-        padding_t: "8%",
         color: "#000"
-      }, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(_Typography.Text, null, "If you are interested, ", _react.default.createElement(_Link.default, {
+      }, _react.default.createElement(_Typography.Heading, null, "Say hello"), _react.default.createElement(Row, null, _react.default.createElement(RowItem, null, _react.default.createElement(_Typography.Text, null, "Email me ", _react.default.createElement(_Link.default, {
         href: "mailto:dominic.okapal@gmail.com"
-      }, "contact me"), ". Or checkout my ", _react.default.createElement(_Link.default, {
-        href: resume
-      }, "resume"), "."), _react.default.createElement(ContactLink, {
-        href: "mailto:domiic.okapal@gmail.com"
-      }, "dominic.okapal@gmail.com"), _react.default.createElement(_Typography.Text, null, "Follow me on the web:"), _react.default.createElement(SocialMediaList, null, _react.default.createElement("li", null, _react.default.createElement(_Link.default, {
+      }, "dominic.okapal@gmail.com"), "."), _react.default.createElement(_Typography.Text, null, "Checkout my ", _react.default.createElement(_Link.default, {
+        href: _Okapal_Dominic_Resume.default
+      }, "resume"), "."), _react.default.createElement(_Typography.Text, null, "Follow me on the web:"), _react.default.createElement(SocialMediaList, null, _react.default.createElement("li", null, _react.default.createElement(_Link.default, {
         href: "https://github.com/OkapalDominic",
         target: "_blank"
       }, _react.default.createElement(_AwesomeIcon.default, {
@@ -33273,7 +33334,10 @@ function (_React$Component) {
         target: "_blank"
       }, _react.default.createElement(_AwesomeIcon.default, {
         icon: "linkedin"
-      }))))));
+      }))))), _react.default.createElement(RowItem, null, _react.default.createElement(ProfileImage, {
+        src: _profile.default,
+        alt: "profile"
+      })))));
     }
   }]);
 
@@ -33281,7 +33345,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Contact;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/AwesomeIcon":"src/App/components/AwesomeIcon.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg"}],"src/images/portfolio/examples/capstoneMockup.jpg":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/AwesomeIcon":"src/App/components/AwesomeIcon.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/profile2.jpg":"src/images/about/profile2.jpg","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../files/Okapal_Dominic_Resume.docx":"src/files/Okapal_Dominic_Resume.docx"}],"src/images/portfolio/examples/capstoneMockup.jpg":[function(require,module,exports) {
 module.exports = "/capstoneMockup.1f1be8cd.jpg";
 },{}],"src/images/portfolio/examples/capstoneRepo.jpg":[function(require,module,exports) {
 module.exports = "/capstoneRepo.8a03c3d9.jpg";
@@ -33289,6 +33353,8 @@ module.exports = "/capstoneRepo.8a03c3d9.jpg";
 module.exports = "/animal_analysis.53720368.jpg";
 },{}],"src/images/portfolio/examples/game.jpg":[function(require,module,exports) {
 module.exports = "/game.60b6ef7b.jpg";
+},{}],"src/images/portfolio/examples/text_adventure.jpg":[function(require,module,exports) {
+module.exports = "/text_adventure.c2abce82.jpg";
 },{}],"src/App/pages/Portfolio.js":[function(require,module,exports) {
 "use strict";
 
@@ -33326,6 +33392,8 @@ var _capstoneRepo = _interopRequireDefault(require("../../images/portfolio/examp
 var _animal_analysis = _interopRequireDefault(require("../../images/portfolio/examples/animal_analysis.jpg"));
 
 var _game = _interopRequireDefault(require("../../images/portfolio/examples/game.jpg"));
+
+var _text_adventure = _interopRequireDefault(require("../../images/portfolio/examples/text_adventure.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33430,17 +33498,23 @@ function (_React$Component) {
       }, _react.default.createElement(_Container.default, {
         centered_h: true
       }, _react.default.createElement(_Typography.Subheading, null, "Dominic Okapal"), _react.default.createElement(_Typography.Heading, null, "My work"), _react.default.createElement(_Typography.Text, null, "Selected examples of my work."), _react.default.createElement(PortfolioGrid, null, _react.default.createElement(PortfolioItem, {
+        href: "https://text-adventure-dw.herokuapp.com/",
+        target: "_blank"
+      }, _react.default.createElement(PortfolioItemThumbnail, {
+        src: _text_adventure.default,
+        alt: "Text Adventure Game"
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This game was created using React, Node.js, Express, Socket.io, and Typescript. The server and client are deployed to Heroku, try it out! It may take a few seconds for the initial load.")), _react.default.createElement(PortfolioItem, {
         href: "../examples/capstone/index.html"
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: _capstoneMockup.default,
         alt: "Mockup for capstone project"
-      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a mockup I made for my capstone project.  A webapp written with Angular for the VA.")), _react.default.createElement(PortfolioItem, {
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is a mockup I made for my capstone project. I used w3.css for the styling.")), _react.default.createElement(PortfolioItem, {
         href: "https://github.com/movshov/VA-Audiology-App",
         target: "_blank"
       }, _react.default.createElement(PortfolioItemThumbnail, {
         src: _capstoneRepo.default,
         alt: "Repository for capstone project"
-      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is the repository where my actual capstone project is being hosted.", _react.default.createElement("br", null), "Search ", _react.default.createElement("strong", null, "author:OkapalDominic"), " in this repository to see my branches.")), _react.default.createElement(PortfolioItem, {
+      }), _react.default.createElement(PortfolioItemThumbnailText, null, "This is the repository where my actual capstone project is being hosted. A webapp written with Angular for the VA.", _react.default.createElement("br", null), "Search ", _react.default.createElement("strong", null, "author:OkapalDominic"), " in this repository to see my branches.")), _react.default.createElement(PortfolioItem, {
         href: "https://github.com/OkapalDominic/animal_analysis",
         target: "_blank"
       }, _react.default.createElement(PortfolioItemThumbnail, {
@@ -33459,7 +33533,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.default = Portfolio;
-},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../images/portfolio/examples/capstoneMockup.jpg":"src/images/portfolio/examples/capstoneMockup.jpg","../../images/portfolio/examples/capstoneRepo.jpg":"src/images/portfolio/examples/capstoneRepo.jpg","../../images/portfolio/examples/animal_analysis.jpg":"src/images/portfolio/examples/animal_analysis.jpg","../../images/portfolio/examples/game.jpg":"src/images/portfolio/examples/game.jpg"}],"node_modules/react-modal/lib/helpers/tabbable.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./../components/Container":"src/App/components/Container.js","./../components/Link":"src/App/components/Link.js","./../components/Section":"src/App/components/Section.js","./../components/Typography":"src/App/components/Typography.js","../../images/about/1920x1080.jpg":"src/images/about/1920x1080.jpg","../../images/about/1600x900.jpg":"src/images/about/1600x900.jpg","../../images/about/1280x800.jpg":"src/images/about/1280x800.jpg","../../images/about/768x1024.jpg":"src/images/about/768x1024.jpg","../../images/about/480x800.jpg":"src/images/about/480x800.jpg","../../images/portfolio/examples/capstoneMockup.jpg":"src/images/portfolio/examples/capstoneMockup.jpg","../../images/portfolio/examples/capstoneRepo.jpg":"src/images/portfolio/examples/capstoneRepo.jpg","../../images/portfolio/examples/animal_analysis.jpg":"src/images/portfolio/examples/animal_analysis.jpg","../../images/portfolio/examples/game.jpg":"src/images/portfolio/examples/game.jpg","../../images/portfolio/examples/text_adventure.jpg":"src/images/portfolio/examples/text_adventure.jpg"}],"node_modules/react-modal/lib/helpers/tabbable.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35599,8 +35673,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _templateObject6() {
+function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n  @media (min-width: 479px) {\n    display: none;\n  }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  & + & {\n    margin-top: 12px;\n  }\n\n  a {\n    padding: 8px;\n    font-size: 16px;\n    font-weight: bold;\n    text-decoration: none;\n    transition: color .25s ease-in-out;\n  }\n\n  a:hover {\n    color: #00cccc;\n    background-image: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));\n    border-radius: 50%;\n  }\n\n  @media (min-width: 480px) {\n    & + & {\n      margin-top: 0;\n    }\n\n    a {\n      color: #fff;\n    }\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -35610,7 +35694,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  & + & {\n    margin-top: 12px;\n  }\n\n  @media (min-width: 480px) {\n    & + & {\n      margin-top: 0;\n      margin-left: 32px;\n    }\n  }\n\n  a {\n    font-size: 16px;\n    font-weight: bold;\n    text-decoration: none;\n    color: #fff;\n    transition: color .25s ease-in-out;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n      display: none;\n    "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -35620,7 +35704,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  display: flex;\n  overflow: hidden;\n  flex-direction: column;\n  justify-content: flex-end;\n  list-style-type: none;\n  height: auto;\n  max-height: 0;\n\n  @media (min-width: 480px) {\n    flex-direction: row;\n    justify-content: flex-end;\n    max-height: 1000px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0;\n  display: flex;\n  overflow: hidden;\n  flex-direction: column;\n  justify-content: flex-end;\n  list-style-type: none;\n  height: auto;\n  max-height: 0;\n  border: 2px solid #00cccc;\n  background: #005555;\n\n  @media (max-width: 479px) {\n    ", "\n  }\n\n  @media (min-width: 480px) {\n    flex-direction: row;\n    justify-content: flex-end;\n    max-height: 1000px;\n    border: none;\n    background: transparent;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -35667,11 +35751,13 @@ var NavWrapper = _styledComponents.default.nav(_templateObject2(), function (pro
   return props.isOpen && (0, _styledComponents.css)(_templateObject3());
 });
 
-var NavList = _styledComponents.default.ul(_templateObject4());
+var NavList = _styledComponents.default.ul(_templateObject4(), function (props) {
+  return !props.isOpen && (0, _styledComponents.css)(_templateObject5());
+});
 
-var NavItem = _styledComponents.default.li(_templateObject5());
+var NavItem = _styledComponents.default.li(_templateObject6());
 
-var NavButton = (0, _styledComponents.default)(_Button.default)(_templateObject6());
+var NavButton = (0, _styledComponents.default)(_Button.default)(_templateObject7());
 
 var Nav =
 /*#__PURE__*/
@@ -35705,13 +35791,17 @@ function (_React$Component) {
         isOpen: this.state.show
       }, _react.default.createElement(NavButton, {
         onClick: this.toggleMenu
-      }, "Menu"), _react.default.createElement(NavList, null, _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
+      }, "Menu"), _react.default.createElement(NavList, {
+        isOpen: this.state.show
+      }, _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/"
       }, "Home")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/about"
       }, "About")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
         href: "/portfolio"
-      }, "Portfolio")))));
+      }, "Portfolio")), _react.default.createElement(NavItem, null, _react.default.createElement(_Link.default, {
+        href: "/contact"
+      }, "Contact")))));
     }
   }]);
 
@@ -35792,6 +35882,9 @@ function (_React$Component) {
         path: "/about",
         component: _About.default
       }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/contact",
+        component: _Contact.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
         path: "/portfolio",
         component: _Portfolio.default
       }), _react.default.createElement(_reactRouterDom.Route, {
@@ -35870,7 +35963,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54446" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50825" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
