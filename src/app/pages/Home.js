@@ -22,7 +22,7 @@ const HomeButton = Button.withComponent('a');
 export default class Home extends React.Component {
   render() {
     return (
-      <Section fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="rgba(0, 0, 0, 0.53)">
+      <Section fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="rgba(0, 0, 0, 0.7)">
         <Container centered_h padding_t="8%" color="#fff">
           <Heading>Dominic Okapal</Heading>
 

@@ -14,6 +14,11 @@ import img1280x800 from '../../images/about/1280x800.jpg';
 import img768x1024 from '../../images/about/768x1024.jpg';
 import img480x800 from '../../images/about/480x800.jpg';
 
+const AboutWrapper = styled(Section)`
+    padding-top: 120px;
+    padding-bottom: 80px;
+`
+
 const ProfileImage = styled.img`
     width: 10em;
     border-radius: 5%;
@@ -43,8 +48,8 @@ const AboutSubheading = styled(Subheading)`
 export default class About extends React.Component {
     render() {
         return (
-            <Section fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="rgba(0, 255, 255, 0.13)">
-                <Container centered_h padding_t="8%" color="#000">
+            <AboutWrapper fullHeight images={[img1920x1080, img1600x900, img1280x800, img768x1024, img480x800]} overlay="rgba(0, 255, 255, 0.13)">
+                <Container centered_h color="#000">
                     <Row>
                         <RowItem>
                             <AboutSubheading>Dominic Okapal</AboutSubheading>
@@ -70,7 +75,7 @@ export default class About extends React.Component {
                         I am excited to jump start my career as a web developer.
                     </Text>
                 </Container>
-            </Section>
-        )
+            </AboutWrapper>
+        );
     }
 }

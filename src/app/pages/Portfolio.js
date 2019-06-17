@@ -18,6 +18,7 @@ import capstoneMockup from '../../images/portfolio/examples/capstoneMockup.jpg';
 import capstoneRepo from '../../images/portfolio/examples/capstoneRepo.jpg';
 import animal_analysis from '../../images/portfolio/examples/animal_analysis.jpg';
 import game from '../../images/portfolio/examples/game.jpg';
+import text_adventure from '../../images/portfolio/examples/text_adventure.jpg';
 
 const PortfolioWrapper = styled(Section)`
     padding-top: 120px;
@@ -136,31 +137,42 @@ export default class Portfolio extends React.Component {
                     </Text>
 
                     <PortfolioGrid>
+
+                        <PortfolioItem href="https://text-adventure-dw.herokuapp.com/" target="_blank">
+                            <PortfolioItemThumbnail
+                                src={text_adventure}
+                                alt="Text Adventure Game" />
+                            <PortfolioItemThumbnailText>
+                                This game was created using React, Node.js, Express, Socket.io, and Typescript. The server and client are deployed to Heroku, try it out!
+                                It may take a few seconds for the initial load.
+                            </PortfolioItemThumbnailText>
+                        </PortfolioItem>
+
                         <PortfolioItem href="../examples/capstone/index.html">
                             <PortfolioItemThumbnail
                                 src={capstoneMockup}
                                 alt="Mockup for capstone project"
                             />
                             <PortfolioItemThumbnailText>
-                                This is a mockup I made for my capstone project.  A webapp written with Angular for the VA.
+                                This is a mockup I made for my capstone project. I used w3.css for the styling.
                             </PortfolioItemThumbnailText>
                         </PortfolioItem>
 
                         <PortfolioItem href="https://github.com/movshov/VA-Audiology-App" target="_blank">
-                            <PortfolioItemThumbnail 
-                            src={capstoneRepo}
-                            alt="Repository for capstone project"
+                            <PortfolioItemThumbnail
+                                src={capstoneRepo}
+                                alt="Repository for capstone project"
                             />
                             <PortfolioItemThumbnailText>
-                                This is the repository where my actual capstone project is being hosted.<br/>
+                                This is the repository where my actual capstone project is being hosted. A webapp written with Angular for the VA.<br />
                                 Search <strong>author:OkapalDominic</strong> in this repository to see my branches.
                             </PortfolioItemThumbnailText>
                         </PortfolioItem>
 
                         <PortfolioItem href="https://github.com/OkapalDominic/animal_analysis" target="_blank">
                             <PortfolioItemThumbnail
-                            src={animal_analysis}
-                            alt="Animal Analysis" />
+                                src={animal_analysis}
+                                alt="Animal Analysis" />
                             <PortfolioItemThumbnailText>
                                 This repo contains a project made using Flask, originally deployed to google cloud.  Upload an image of an animal
                                 and write about it.  It then looks up information on that animal.  There are instructions if you want to try it out.
@@ -169,8 +181,8 @@ export default class Portfolio extends React.Component {
 
                         <PortfolioItem href="/examples/game">
                             <PortfolioItemThumbnail
-                            src={game}
-                            alt="Drag game" />
+                                src={game}
+                                alt="Drag game" />
                             <PortfolioItemThumbnailText>
                                 This is a simple game made using react.  See if you can reach the exit!
                             </PortfolioItemThumbnailText>
@@ -178,6 +190,6 @@ export default class Portfolio extends React.Component {
                     </PortfolioGrid>
                 </Container>
             </PortfolioWrapper>
-        )
+        );
     }
 }

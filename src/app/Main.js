@@ -20,7 +20,7 @@ export default class Main extends React.Component {
                     <Route exact={true} path="/" component={Home} />
                     <Route path="/home" component={Home} />
                     <Route path="/about" component={About} />
-                    {/* <Route path="/contact" component={Contact} /> */}
+                    <Route path="/contact" component={Contact} />
                     <Route path="/portfolio" component={Portfolio} />
                     <Route path="/examples/game" component={Game} />
                     <Route component={FourOhFour} />

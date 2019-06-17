@@ -8,7 +8,7 @@ const Link = styled.a`
 
     &:focus,
     &:hover {
-        color: #006666;
+        color: #cc7722;
     }
 `
 

@@ -45,8 +45,14 @@ const NavList = styled.ul`
   list-style-type: none;
   height: auto;
   max-height: 0;
-  border: 2px solid #006666;
+  border: 2px solid #00cccc;
   background: #005555;
+
+  @media (max-width: 479px) {
+    ${props => !props.isOpen && css`
+      display: none;
+    `}
+  }
 
   @media (min-width: 480px) {
     flex-direction: row;
@@ -63,17 +69,22 @@ const NavItem = styled.li`
   }
 
   a {
+    padding: 8px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    color: #009999;
     transition: color .25s ease-in-out;
+  }
+
+  a:hover {
+    color: #00cccc;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    border-radius: 50%;
   }
 
   @media (min-width: 480px) {
     & + & {
       margin-top: 0;
-      margin-left: 32px;
     }
 
     a {
@@ -102,7 +113,7 @@ export default class Nav extends React.Component {
   toggleMenu() {
     this.setState({
       show: !this.state.show
-    })
+    });
   }
 
   render() {
@@ -111,7 +122,7 @@ export default class Nav extends React.Component {
         <NavWrapper isOpen={this.state.show}>
           <NavButton onClick={this.toggleMenu}>Menu</NavButton>
 
-          <NavList>
+          <NavList isOpen={this.state.show}>
             <NavItem>
               <Link href="/">Home</Link>
             </NavItem>
@@ -124,9 +135,9 @@ export default class Nav extends React.Component {
               <Link href="/portfolio">Portfolio</Link>
             </NavItem>
 
-            {/* <NavItem>
-                            <Link href="/contact">Contact</Link>
-                        </NavItem> */}
+            <NavItem>
+              <Link href="/contact">Contact</Link>
+            </NavItem>
           </NavList>
         </NavWrapper>
       </Header>
