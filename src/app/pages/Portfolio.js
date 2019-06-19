@@ -38,25 +38,38 @@ const PortfolioItemThumbnail = styled.img`
     transition: opacity .25s ease-in-out;
 `
 
-const PortfolioItemThumbnailText = styled(Text)`
+const PortfolioItemThumbnailContainer = styled.div`
     opacity: 0;
     transition: opacity .25s ease-in-out;
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    color: black;
-    background-color: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 10px;
     width: 98%;
     padding: 3px;
+    text-align: center;
 `
 
-const PortfolioItem = styled.a`
+const PortfolioItemThumbnailText = styled(Text)`
+    margin-bottom: 15px;
+    text-align: left;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+`
+
+const PortfolioButton = styled(Link)`
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(155, 155, 155));
+    color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 3px;
+`
+
+const PortfolioItem = styled.div`
     position: relative;
     display: block;
-    cursor: pointer;
     width: 100%;
 
     &:focus,
@@ -64,7 +77,7 @@ const PortfolioItem = styled.a`
         ${PortfolioItemThumbnail} {
             opacity: .3;
         }
-        ${PortfolioItemThumbnailText} {
+        ${PortfolioItemThumbnailContainer} {
             opacity: 1;
         }
     }
@@ -138,54 +151,83 @@ export default class Portfolio extends React.Component {
 
                     <PortfolioGrid>
 
-                        <PortfolioItem href="https://text-adventure-dw.herokuapp.com/" target="_blank">
+                        <PortfolioItem>
                             <PortfolioItemThumbnail
                                 src={text_adventure}
                                 alt="Text Adventure Game" />
-                            <PortfolioItemThumbnailText>
-                                This game was created using React, Node.js, Express, Socket.io, and Typescript. The server and client are deployed to Heroku, try it out!
-                                It may take a few seconds for the initial load.
-                            </PortfolioItemThumbnailText>
+                            <PortfolioItemThumbnailContainer>
+                                <PortfolioItemThumbnailText>
+                                    This game was created using React, Node.js, Express, Socket.io, and Typescript.
+                                    The server and client are deployed to Heroku, try it out!
+                                    It may take a few seconds for the initial load.
+                                </PortfolioItemThumbnailText>
+                                <PortfolioButton href="https://text-adventure-dw.herokuapp.com/" target="_blank">
+                                    Play Game
+                                </PortfolioButton>
+                            </PortfolioItemThumbnailContainer>
                         </PortfolioItem>
 
-                        <PortfolioItem href="../examples/capstone/index.html">
+                        <PortfolioItem>
                             <PortfolioItemThumbnail
                                 src={capstoneMockup}
                                 alt="Mockup for capstone project"
                             />
-                            <PortfolioItemThumbnailText>
-                                This is a mockup I made for my capstone project. I used w3.css for the styling.
-                            </PortfolioItemThumbnailText>
+                            <PortfolioItemThumbnailContainer>
+                                <PortfolioItemThumbnailText>
+                                    This is a mockup I made for my capstone project. I used w3.css for the styling.
+                                </PortfolioItemThumbnailText>
+                                <PortfolioButton href="../examples/capstone/index.html">
+                                    Check it out
+                                </PortfolioButton>
+                            </PortfolioItemThumbnailContainer>
                         </PortfolioItem>
 
-                        <PortfolioItem href="https://github.com/movshov/VA-Audiology-App" target="_blank">
+                        <PortfolioItem>
                             <PortfolioItemThumbnail
                                 src={capstoneRepo}
                                 alt="Repository for capstone project"
                             />
-                            <PortfolioItemThumbnailText>
-                                This is the repository where my actual capstone project is being hosted. A webapp written with Angular for the VA.<br />
-                                Search <strong>author:OkapalDominic</strong> in this repository to see my branches.
-                            </PortfolioItemThumbnailText>
+                            <PortfolioItemThumbnailContainer>
+                                <PortfolioItemThumbnailText>
+                                    This is the repository where my actual capstone project is being hosted. A webapp written with Angular for the VA.<br />
+                                    Search <strong>author:OkapalDominic</strong> in this repository to see my branches.
+                                </PortfolioItemThumbnailText>
+                                <PortfolioButton href="https://github.com/movshov/VA-Audiology-App" target="_blank">
+                                    Look at repository
+                                </PortfolioButton>
+                            </PortfolioItemThumbnailContainer>
                         </PortfolioItem>
 
-                        <PortfolioItem href="https://github.com/OkapalDominic/animal_analysis" target="_blank">
+                        <PortfolioItem>
                             <PortfolioItemThumbnail
                                 src={animal_analysis}
                                 alt="Animal Analysis" />
-                            <PortfolioItemThumbnailText>
-                                This repo contains a project made using Flask, originally deployed to google cloud.  Upload an image of an animal
-                                and write about it.  It then looks up information on that animal.  There are instructions if you want to try it out.
-                            </PortfolioItemThumbnailText>
+                            <PortfolioItemThumbnailContainer>
+                                <PortfolioItemThumbnailText>
+                                    This is a project made using Flask, originally deployed to google cloud it is now available on Heroku. Upload an image of an animal
+                                    and write about it. Click Submit and it will look up information on that animal.
+                                </PortfolioItemThumbnailText>
+                                <PortfolioButton href="https://animal-analysis.herokuapp.com" target="_blank">
+                                    Try the app
+                                </PortfolioButton>
+                                <PortfolioButton href="https://github.com/OkapalDominic/animal_analysis" target="_blank">
+                                    Look at repository
+                                </PortfolioButton>
+                            </PortfolioItemThumbnailContainer>
                         </PortfolioItem>
 
-                        <PortfolioItem href="/examples/game">
+                        <PortfolioItem>
                             <PortfolioItemThumbnail
                                 src={game}
                                 alt="Drag game" />
-                            <PortfolioItemThumbnailText>
-                                This is a simple game made using react.  See if you can reach the exit!
-                            </PortfolioItemThumbnailText>
+                            <PortfolioItemThumbnailContainer>
+                                <PortfolioItemThumbnailText>
+                                    This is a simple game made using react.  See if you can reach the exit!
+                                </PortfolioItemThumbnailText>
+                                <PortfolioButton href="/examples/game">
+                                    Play Game
+                                </PortfolioButton>
+                            </PortfolioItemThumbnailContainer>
                         </PortfolioItem>
                     </PortfolioGrid>
                 </Container>

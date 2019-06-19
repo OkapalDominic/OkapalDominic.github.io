@@ -74,6 +74,7 @@ const NavItem = styled.li`
     font-weight: bold;
     text-decoration: none;
     transition: color .25s ease-in-out;
+    color: #fff;
   }
 
   a:hover {

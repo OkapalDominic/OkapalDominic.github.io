@@ -59,6 +59,11 @@ const Row = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width: 479px) {
+        flex-direction: column-reverse;
+    }
 `
 
 const RowItem = styled.div`
@@ -69,7 +74,6 @@ const ProfileImage = styled.img`
     width: 10em;
     border-radius: 5%;
     margin-bottom: 20px;
-    margin-left: 60%;
 `
 
 export default class Contact extends React.Component {
