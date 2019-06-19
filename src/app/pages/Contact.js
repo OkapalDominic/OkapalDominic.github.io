@@ -59,7 +59,7 @@ const Row = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     @media (max-width: 479px) {
         flex-direction: column-reverse;
@@ -68,6 +68,9 @@ const Row = styled.div`
 
 const RowItem = styled.div`
     flex-grow: ${props => props.size || 0};
+    & + & {
+        margin-left: 1%;
+    }
 `
 
 const ProfileImage = styled.img`
