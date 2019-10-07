@@ -75,12 +75,14 @@ const NavItem = styled.li`
     text-decoration: none;
     transition: color .25s ease-in-out;
     color: #fff;
+    border: 2px solid transparent;
   }
 
   a:hover {
-    color: #00cccc;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-    border-radius: 50%;
+    border: 2px solid;
+    border-color: #00ffff;
+    color: #00ffff;
+    background: #005555;
   }
 
   @media (min-width: 480px) {
