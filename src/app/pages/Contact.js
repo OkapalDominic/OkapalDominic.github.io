@@ -100,7 +100,7 @@ export default class Contact extends React.Component {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="www.linkedin.com/in/dominic-okapal" target="_blank">
+                                    <Link href="https://www.linkedin.com/in/dominic-okapal" target="_blank">
                                         <AwesomeIcon icon="linkedin" />
                                     </Link>
                                 </li>
