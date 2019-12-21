@@ -61,18 +61,21 @@ export default class About extends React.Component {
                     </Row>
 
                     <Text background_color="rgba(255, 255, 255, 0.18)">
-                        I was born and raised in Portland, Oregon. Upon graduating from Sunset High School, I joined the Air Force and served for 6 years.
-                        Shortly after moving back to Portland, I got married to an amazing woman. We now have four wonderful children.
+                        Born and raised in Portland, Oregon I graduated from Sunset High School and served in the Air Force for 6 years.
+                        Shortly after seperating from the Air Force, I got married to an amazing woman. We now have four wonderful children and live in Helena, Montana.
                     </Text>
                     <Text background_color="rgba(255, 255, 255, 0.18)">
-                        Currently, I am working toward a Computer Science degree at Portland State University. As electives, I have taken
+                        I recently graduated from Portland State University with a BS in Computer Science. As electives, I have taken
                         Computational Structures, Computer Graphics, Full-Stack Web Development, Internet & Cloud Systems, Intro to Human Computer Interactions,
-                        and Intro to Visual Computing.  I really enjoyed my Capstone.  It was great to work in a large team and experience Git in that setting.
-                        Being the point-of-contact, I was able to use what I learned in Intro to Human Computer Interactions.
+                        and Intro to Visual Computing.
+                    </Text>
+                    <Text background_color="rgba(255, 255, 255, 0.18)">
+                        I really enjoyed my Capstone. It was great to work in a larger team and experience Git in that setting.
+                        Being the point-of-contact, I was able to use some of what I learned in Intro to Human Computer Interactions.
                         Since our Capstone project was a web app built with Angular, I was grateful to be able to apply what I learned in Full-Stack Web Development.
                     </Text>
                     <Text background_color="rgba(255, 255, 255, 0.18)">
-                        I am excited to jump start my career as a web developer.
+                        Checkout some of my work on my <Link href="/portfolio">Portfolio</Link> page!
                     </Text>
                 </Container>
             </AboutWrapper>
